@@ -31,7 +31,12 @@ section{padding:88px 0}
 .label{font:500 13px/1.2 var(--head);letter-spacing:.22em;text-transform:uppercase;color:var(--ink2);margin-bottom:14px}
 .lead{font-size:19px;color:var(--ink2);max-width:640px;margin:0}
 .hl{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .08em}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+*{-webkit-tap-highlight-color:transparent}
+:focus{outline:none}
+:focus:not(:focus-visible){outline:none;box-shadow:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+button,a,input{-webkit-tap-highlight-color:transparent}
+button::-moz-focus-inner{border:0}
 
 /* Buttons: only colour/border/shadow, 150 ms */
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;border-radius:10px;font:600 16px/1 var(--text);text-decoration:none;cursor:pointer;border:2px solid transparent;
