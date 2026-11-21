@@ -112,6 +112,45 @@ nav.links a{white-space:nowrap;font:600 15px/1 var(--text);text-decoration:none;
 .hint{font-size:13px;color:var(--grau-hell);margin:10px 0 0;opacity:0;transition:opacity .45s .15s}
 .ready .hint{opacity:1}
 
+
+/* ---- Full-bleed stage (critics v2) ---- */
+.hero{padding:0}
+.hero-top{position:relative;display:flex;flex-direction:column}
+@media (min-width:901px){
+  .hero-top{min-height:min(calc(100vh - 68px - 150px),760px);min-height:min(calc(100svh - 68px - 150px),760px);justify-content:center}
+  .hero-top{min-height:max(560px,min(calc(100vh - 218px),760px))}
+  .stage-col{position:absolute;top:0;right:0;bottom:0;width:66%}
+  .stage{position:absolute;inset:0;aspect-ratio:auto;border-radius:0;box-shadow:none}
+  .stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--graphit) 0%,rgba(34,38,42,.85) 14%,rgba(34,38,42,0) 46%),linear-gradient(0deg,rgba(34,38,42,.85) 0%,rgba(34,38,42,0) 30%)}
+  .stage .tag{left:auto;right:28px;top:24px;bottom:auto}
+  .stage .season{right:auto;left:38%;top:26px}
+  .stage-ui{position:absolute;left:40%;right:28px;bottom:22px;z-index:2}
+  .stage-ui .ctrl{margin-top:0}
+  .stage-ui .hint{text-shadow:0 1px 6px rgba(0,0,0,.6);color:#DDE0E2}
+  .hero-wrap{position:relative;z-index:3;width:100%;pointer-events:none}
+  .hero-text{max-width:500px;padding:56px 0 64px;pointer-events:auto}
+  .strip-wrap{margin-top:0}
+}
+.stage .tag span{line-height:1.15}
+.stage .tag small{font-size:11px;color:var(--grau-hell)}
+@media (max-width:900px){
+  .hero-top .hero-wrap{order:2;padding-top:18px}
+  .hero-top .stage-col{order:1}
+  .hero-text{display:flex;flex-direction:column}
+  .hero-text .lead{order:5;margin-top:18px}
+  .hero-text .eyebrow{order:0}.hero-text h1{order:1;margin-bottom:12px}.hero-text .addr{order:2;margin-bottom:14px}.hero-text .cta{order:3}
+  .hero{padding-top:0!important}
+  .stage{border-radius:0!important}
+  .stage .tag{left:10px;bottom:10px;padding:6px 10px}.stage .tag small{display:none}.stage .tag b{font-size:18px}
+  .hero-text .facts{order:6}
+  .hero .cta{margin:4px 0 16px}
+  .stage-ui .ctrl{margin-top:10px}
+  .stage-ui .hint{display:none}
+  .stage{border-radius:0;box-shadow:none}
+  .stage-ui{padding:0 16px}
+  .strip-wrap{margin-top:22px}
+}
+
 /* Filmstrip */
 .strip-wrap{margin-top:46px;border-top:1px solid #3A3F44;padding:18px 0 26px}
 .strip-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
@@ -171,7 +210,7 @@ nav.links a{white-space:nowrap;font:600 15px/1 var(--text);text-decoration:none;
 .switch.firma .knob{transform:translateX(100%)}
 @media (hover:hover){.switch button[aria-pressed=false]:hover{color:var(--graphit)}.switch:hover .knob{box-shadow:0 0 0 5px var(--nova-soft)}}
 .pf{display:grid}
-.pf>.pane{grid-area:1/1;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .35s,transform .35s var(--ease),visibility .35s}
+.pf>.pane{grid-area:1/1;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:start;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .35s,transform .35s var(--ease),visibility .35s}
 .pf>.pane.on{opacity:1;visibility:visible;transform:none}
 .pane h3{font-size:clamp(24px,3vw,34px);line-height:1.1;font-weight:850;margin:0 0 18px}
 .ticks{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
@@ -235,13 +274,62 @@ nav.links a{white-space:nowrap;font:600 15px/1 var(--text);text-decoration:none;
 }
 .note{font-size:14px;color:var(--grau);margin-top:16px}
 
+
+/* ---------- critics v2: Firma, Track, Asks, Wunschauto ---------- */
+.firma-cta{margin-top:18px;display:grid;gap:10px;justify-items:start}
+.small-note{margin:0;font-size:14px;color:var(--grau)}
+.small-note a{font-weight:700;text-decoration:none;border-radius:6px;padding:1px 4px;margin:-1px -4px;transition:background-color .2s,color .2s}
+@media (hover:hover){.small-note a:hover{background:var(--nova-soft);color:var(--graphit)}}
+.track{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;padding-top:34px}
+.track .rail{position:absolute;left:10px;right:10px;top:9px;height:4px;border-radius:4px;background:#3E444A;overflow:hidden}
+.track .fill{position:absolute;inset:0;width:0;background:var(--nova);border-radius:4px;transition:width 1.8s var(--ease)}
+.track.go .fill{width:100%}
+.track .step{position:relative;background:none;border:0;border-top:0;padding:0 4px 0 0;opacity:.35;transition:opacity .4s,transform .2s var(--ease)}
+.track .step::before{display:none}
+.track .dot{position:absolute;top:-34px;left:0;width:22px;height:22px;border-radius:50%;background:var(--graphit);border:3px solid #555B61;transition:border-color .3s,background-color .3s,box-shadow .2s}
+.track.go .step{opacity:1}
+.track.go .step .dot{border-color:var(--nova);background:var(--nova)}
+.track.go .step:nth-of-type(1){transition-delay:.1s}.track.go .step:nth-of-type(2){transition-delay:.45s}.track.go .step:nth-of-type(3){transition-delay:.8s}.track.go .step:nth-of-type(4){transition-delay:1.15s}.track.go .step:nth-of-type(5){transition-delay:1.5s}
+.track.go .step:nth-of-type(1) .dot{transition-delay:.1s}.track.go .step:nth-of-type(2) .dot{transition-delay:.45s}.track.go .step:nth-of-type(3) .dot{transition-delay:.8s}.track.go .step:nth-of-type(4) .dot{transition-delay:1.15s}.track.go .step:nth-of-type(5) .dot{transition-delay:1.5s}
+.track.live .step,.track.live .step .dot{transition-delay:0s!important}
+@media (hover:hover){.track.live .step:hover{transform:translateY(-4px);box-shadow:none;border:0}.track.live .step:hover .dot{box-shadow:0 0 0 7px rgba(197,232,75,.25)}.track.live .step:hover h3{color:var(--nova)}}
+.track .step h3{transition:color .2s}
+.asks{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:46px;padding-top:26px;border-top:1px solid #3A3F44}
+.asks-h{font-size:15px;color:#C9CDD0;margin-right:6px}
+.asks a{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;border:1.5px solid #555B61;text-decoration:none;font-weight:700;font-size:15px;color:var(--weiss);transition:border-color .2s,box-shadow .2s,background-color .2s}
+@media (hover:hover){.asks a:hover{border-color:var(--nova);box-shadow:0 0 0 5px rgba(197,232,75,.16);background:#2D3135}}
+.wish{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:26px;margin-top:30px;align-items:stretch}
+.wish-pick{display:grid;gap:18px;background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:24px}
+.gl{display:block;font:800 12px/1 var(--wide);font-stretch:118%;letter-spacing:.12em;text-transform:uppercase;color:var(--grau);margin-bottom:10px}
+.grp{display:flex;flex-wrap:wrap;gap:8px}.grp .gl{width:100%}
+.grp button{font:600 15px/1 var(--text);padding:11px 15px;border-radius:999px;border:1.5px solid var(--linie);background:var(--kreide);color:var(--graphit);cursor:pointer;transition:border-color .2s,box-shadow .2s,background-color .2s,color .2s}
+.grp button[aria-pressed=true]{background:var(--graphit);border-color:var(--graphit);color:var(--weiss)}
+@media (hover:hover){.grp button:hover{border-color:var(--nova-ink);box-shadow:0 0 0 4px var(--nova-soft)}}
+.wish-out{background:var(--graphit);color:var(--weiss);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;transition:box-shadow .2s}
+.wish-out .gl{color:var(--grau-hell)}
+.sms-bubble{margin:0;background:#2F3439;border-radius:18px 18px 18px 4px;padding:16px 18px;font-size:17px;line-height:1.5;flex:1}
+.wish-out .acts{display:flex;gap:10px;flex-wrap:wrap}
+@media (hover:hover){.wish-out:hover{box-shadow:0 0 0 5px var(--nova-soft)}}
+.mini-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.mini-row figure{margin:0;aspect-ratio:4/3;border-radius:14px;overflow:hidden}
+.mini-row img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+@media (hover:hover){.mini-row figure:hover img{transform:scale(1.06)}}
+@media (max-width:900px){.track{grid-template-columns:minmax(0,1fr);padding-top:0;padding-left:40px;gap:22px}
+  .track .rail{left:9px;right:auto;top:6px;bottom:6px;width:4px;height:auto}
+  .track .fill{width:100%!important;height:0;transition:height 1.8s var(--ease)}
+  .track.go .fill{height:100%}
+  .track .dot{top:0;left:-40px}
+  .wish{grid-template-columns:minmax(0,1fr)}
+  .mini-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.wish-out .acts .btn{flex:1 1 auto;justify-content:center}}
+
 /* ---------- Waschplatz ---------- */
 .wash{background:var(--kreide)}
 .wash-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:44px;align-items:center}
 .wash figure{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/3;position:relative}
 .wash figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 @media (hover:hover){.wash figure:hover img{transform:scale(1.04)}}
-.h24{display:inline-flex;align-items:baseline;gap:10px;margin:18px 0 8px;padding:14px 18px;border-radius:16px;background:var(--graphit);color:var(--weiss);transition:box-shadow .2s}
+.h24{display:inline-flex;flex-wrap:wrap;max-width:100%;align-items:baseline;gap:4px 10px;margin:18px 0 8px;padding:14px 18px;border-radius:16px;background:var(--graphit);color:var(--weiss);transition:box-shadow .2s}
 .h24 b{font:900 44px/1 var(--wide);font-stretch:125%;color:var(--nova)}
 @media (hover:hover){.h24:hover{box-shadow:0 0 0 6px var(--nova-soft)}}
 
@@ -330,8 +418,11 @@ footer b{color:#D6D9DC}
   .callbar{opacity:0;transform:translateY(90px);pointer-events:none;transition:opacity .3s,transform .35s var(--ease)}
   .callbar.show{opacity:1;transform:none;pointer-events:auto}
 }
+@media (max-width:400px){.stage{aspect-ratio:16/10}.hero-text .eyebrow{display:none}}
 @media (max-width:360px){.hero .cta .btn{font-size:15px}.days{gap:5px}.day .wd{font-size:12px}}
 @media (max-height:500px) and (orientation:landscape){
+  .hero-top .stage-col{order:3;margin-top:10px}.hero-top .hero-wrap{order:1}
+  .stage{aspect-ratio:16/9}
   .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
   .hero h1{font-size:40px}
   .hero p.lead,.hero .eyebrow,.facts{display:none}
@@ -359,7 +450,8 @@ footer b{color:#D6D9DC}
     <a class="mark" href="#top" aria-label="Garage Auto Nova AG – nach oben"><small>GARAGE</small><span>AUTO <i>NOVA</i></span></a>
     <nav class="links" aria-label="Hauptnavigation">
       <a href="#schweiz">Unsere Kunden</a>
-      <a href="#fuerwen">Privat &amp; Firma</a>
+      <a href="#fuerwen">Privat</a>
+      <a href="#firma" data-open="firma">Für Firmen</a>
       <a href="#uebergabe">Übergabe</a>
       <a href="#fahrzeuge">Fahrzeuge</a>
       <a href="#waschplatz">Waschplatz</a>
@@ -372,12 +464,28 @@ footer b{color:#D6D9DC}
 <main id="top">
 <!-- ================= HERO: Ein Platz. 77 Autos. ================= -->
 <section class="hero on-dark" id="hero">
-  <div class="wrap">
-    <div class="hero-grid">
+  <div class="hero-top">
+    <div class="stage-col">
+      <div class="stage" id="stage" aria-roledescription="Fotoschieber" aria-label="77 Fotos vom selben Platz">
+        <img class="a" id="imgA" src="img/g13.jpg" alt="Auto auf dem Platz der Garage Auto Nova" width="1200" height="900">
+        <img class="b" id="imgB" src="img/g13.jpg" alt="" width="1200" height="900">
+        <span class="season" id="season">Winter</span>
+        <span class="tag"><b id="num">13</b><span>von 77 Fotos<br><small>vom selben Platz</small></span></span>
+      </div>
+      <div class="stage-ui">
+        <div class="ctrl">
+          <button class="rb" id="prev" aria-label="Vorheriges Auto"><svg><use href="#i-l"/></svg></button>
+          <input type="range" id="slider" min="1" max="77" value="76" aria-label="Foto wählen, 1 bis 77">
+          <button class="rb" id="next" aria-label="Nächstes Auto"><svg><use href="#i-r"/></svg></button>
+        </div>
+        <p class="hint">Schieben oder wischen – der Platz bleibt, die Autos wechseln.</p>
+      </div>
+    </div>
+    <div class="wrap hero-wrap">
       <div class="hero-text">
         <div class="eyebrow"><b>Gossau SG</b> · Occasionen · Firmenfahrzeuge · Waschplatz</div>
         <h1>Ein Platz.<br><em>77 Autos.</em></h1>
-        <p class="lead">Jedes Auto auf unseren Fotos stand genau hier – beim Bäumchen an der Bischofszellerstrasse&nbsp;108. Für Private und für Firmen, persönlich übergeben von Martin&nbsp;Zeuch.</p>
+        <p class="lead">Jedes Auto auf unseren 77 Fotos stand genau hier – beim Bäumchen an der Bischofszellerstrasse&nbsp;108. Welche Occasionen heute auf dem Platz stehen, sagt Ihnen Martin&nbsp;Zeuch am Telefon.</p>
         <div class="cta">
           <a class="btn btn-nova" href="tel:+41792229000"><svg><use href="#i-tel"/></svg>079 222 90 00</a>
           <a class="btn btn-line" href="#probefahrt"><svg><use href="#i-car"/></svg>Probefahrt vereinbaren</a>
@@ -386,27 +494,16 @@ footer b{color:#D6D9DC}
           <a href="https://www.google.com/maps/dir/?api=1&destination=Garage+Auto+Nova+AG,+Bischofszellerstrasse+108,+9200+Gossau" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span>Bischofszellerstrasse 108, 9200&nbsp;Gossau</span></a>
         </div>
         <div class="facts">
-          <span class="chip"><b>4,9</b><span class="st">★★★★★</span>Google · 42 Bewertungen</span>
-          <span class="chip"><b>42 / 42</b>persönlich beantwortet</span>
+          <span class="chip"><b>4,9</b><span class="st">★★★★★</span>42 Google-Bewertungen</span>
+          <span class="chip"><b>42/42</b>persönlich beantwortet</span>
+          <span class="chip"><b>0</b>Ablieferungs&shy;pauschale</span>
         </div>
-      </div>
-      <div class="stage-col">
-        <div class="stage" id="stage" aria-roledescription="Fotoschieber" aria-label="77 Fotos vom selben Platz">
-          <img class="a" id="imgA" src="img/g13.jpg" alt="Auto auf dem Platz der Garage Auto Nova" width="1200" height="900">
-          <img class="b" id="imgB" src="img/g13.jpg" alt="" width="1200" height="900">
-          <span class="season" id="season">Winter</span>
-          <span class="tag"><b id="num">13</b> von 77 Fotos</span>
-        </div>
-        <div class="ctrl">
-          <button class="rb" id="prev" aria-label="Vorheriges Auto"><svg><use href="#i-l"/></svg></button>
-          <input type="range" id="slider" min="1" max="77" value="76" aria-label="Foto wählen, 1 bis 77">
-          <button class="rb" id="next" aria-label="Nächstes Auto"><svg><use href="#i-r"/></svg></button>
-        </div>
-        <p class="hint">Schieben, wischen oder ein Foto unten antippen – der Platz bleibt, die Autos wechseln.</p>
       </div>
     </div>
+  </div>
+  <div class="wrap">
     <div class="strip-wrap">
-      <div class="strip-head"><span class="eyebrow">Alle 77 Fotos · vom selben Platz</span><span>Fotos: Garage Auto Nova AG</span></div>
+      <div class="strip-head"><span class="eyebrow">Alle 77 Fotos · vom selben Platz · nicht der aktuelle Bestand</span><span>Fotos: Garage Auto Nova AG</span></div>
       <div class="strip" id="strip" role="list"></div>
     </div>
   </div>
@@ -462,15 +559,19 @@ footer b{color:#D6D9DC}
         </div>
         <figure><img src="img/g67.jpg" alt="Schwarzer VW-Bus auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
       </div>
-      <div class="pane" data-k="firma" aria-hidden="true">
+      <div class="pane" data-k="firma" aria-hidden="true" id="firma">
         <div>
           <h3>Ein Fahrzeug mehr für die Flotte – Papierkram inklusive.</h3>
           <ul class="ticks">
-            <li>Nutzfahrzeuge wie der VW Caddy.</li>
-            <li>Geschäftsautos wie der Skoda Kamiq.</li>
+            <li>VW Caddy für die Flotte, Skoda Kamiq als Geschäftsauto – beides über Martin&nbsp;Zeuch.</li>
             <li>Beratung, Papiere und Übergabe aus einer Hand.</li>
+            <li>Versicherung und Zulassung organisiert – so erlebt von Kunden.</li>
           </ul>
-          <div class="quote"><q>Wir durften unsere Flotte um ein weiteres Fahrzeug erweitern und sind rundum begeistert!</q><div class="who">Patric Schmid · Google-Bewertung ★★★★★</div></div>
+          <div class="quote"><q>Von der Beratung über den gesamten Papierkram bis zur Fahrzeugübergabe hat alles absolut reibungslos und professionell funktioniert.</q><div class="who">Patric Schmid · Firmenkunde · Google-Bewertung ★★★★★</div></div>
+          <div class="firma-cta">
+            <a class="btn btn-dark" id="offerteBtn" href="sms:+41792229000"><svg><use href="#i-sms"/></svg>Offerte für die Firma anfragen</a>
+            <p class="small-note">Rechnung auf die Firma, mehrere Fahrzeuge, Leasing? Fragen Sie Martin Zeuch direkt: <a href="tel:+41792229000">079&nbsp;222&nbsp;90&nbsp;00</a></p>
+          </div>
         </div>
         <figure><img src="img/g50.jpg" alt="Roter Lieferwagen auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
       </div>
@@ -486,12 +587,17 @@ footer b{color:#D6D9DC}
       <p class="big-q">Das gehört zu einer richtigen Ablieferung dazu, darum verrechnen wir auch keine Ablieferungs&shy;pauschale.</p>
       <p class="big-who">Martin Zeuch, Antwort auf eine Google-Bewertung</p>
     </div>
-    <div class="steps rv">
-      <div class="step"><h3>Probefahrt</h3><q>Präsentation und Probefahrt vom feinsten!</q><small>Bruno Schwab</small></div>
-      <div class="step"><h3>MFK</h3><q>reibungslos von probefahrt über mfk bis zur ablieferung 5 sterne!</q><small>Lazar Mitrovic</small></div>
-      <div class="step"><h3>Versicherung &amp; Zulassung</h3><q>Er hat wegen der Versicherung und wegen der Zulassung alles Organisiert.</q><small>christofer pereira</small></div>
-      <div class="step"><h3>Alle Funktionen erklärt</h3><q>Die Übernahme des Autos hat einwandfrei funktioniert inkl. Erklärung aller Funktionen.</q><small>Jacqueline Wäspe</small></div>
-      <div class="step"><h3>Eintausch</h3><q>Sehr faires Angebot auch beim Eintauschfahrzeug und top Zustand des neuen Fahrzeuges</q><small>Engelbert Helfenberger</small></div>
+    <div class="track rv" id="track">
+      <div class="rail"><span class="fill"></span></div>
+      <div class="step"><span class="dot"></span><h3>Probefahrt</h3><q>Präsentation und Probefahrt vom feinsten!</q><small>Bruno Schwab</small></div>
+      <div class="step"><span class="dot"></span><h3>MFK</h3><q>reibungslos von probefahrt über mfk bis zur ablieferung 5 sterne!</q><small>Lazar Mitrovic</small></div>
+      <div class="step"><span class="dot"></span><h3>Versicherung &amp; Zulassung</h3><q>Er hat wegen der Versicherung und wegen der Zulassung alles Organisiert.</q><small>christofer pereira</small></div>
+      <div class="step"><span class="dot"></span><h3>Alle Funktionen erklärt</h3><q>Die Übernahme des Autos hat einwandfrei funktioniert inkl. Erklärung aller Funktionen.</q><small>Jacqueline Wäspe</small></div>
+      <div class="step"><span class="dot"></span><h3>Eintausch</h3><q>Sehr faires Angebot auch beim Eintauschfahrzeug und top Zustand des neuen Fahrzeuges</q><small>Engelbert Helfenberger</small></div>
+    </div>
+    <div class="asks rv">
+      <span class="asks-h">Fragen Sie Martin Zeuch am Telefon:</span>
+      <a href="tel:+41792229000">Garantie?</a><a href="tel:+41792229000">Letzte MFK?</a><a href="tel:+41792229000">Serviceheft?</a><a href="tel:+41792229000">Eintausch?</a><a href="tel:+41792229000">Finanzierung?</a>
     </div>
   </div>
 </section>
@@ -521,15 +627,37 @@ footer b{color:#D6D9DC}
   <div class="wrap">
     <div class="rv">
       <div class="eyebrow">Fahrzeuge</div>
-      <h2>Was gerade auf dem Platz steht.</h2>
-      <p class="lead">Der Bestand wechselt laufend. Welche Autos heute da sind, erfahren Sie am Telefon – inklusive Preis und Probefahrt.</p>
+      <h2>Sagen Sie, was Sie suchen.</h2>
+      <p class="lead">Der Bestand wechselt laufend. Welche Autos gerade passen und was sie kosten, sagt Ihnen Martin Zeuch – per Telefon oder SMS.</p>
     </div>
-    <div class="cars rv">
-      <article class="car-card"><figure><img src="img/g04.jpg" alt="Roter SUV auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure><div class="bd"><h3>SUV &amp; Crossover</h3><p>Kompakt bis gross, für Alltag und Ausfahrt.</p><div class="row"><span class="price">Preis auf Anfrage</span><a class="go" href="#probefahrt">Probefahrt <svg width="16" height="16"><use href="#i-r"/></svg></a></div></div></article>
-      <article class="car-card"><figure><img src="img/g24.jpg" alt="Silberner Kombi auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure><div class="bd"><h3>Kombi &amp; Familie</h3><p>Platz für Kinder, Gepäck und Ferien.</p><div class="row"><span class="price">Preis auf Anfrage</span><a class="go" href="#probefahrt">Probefahrt <svg width="16" height="16"><use href="#i-r"/></svg></a></div></div></article>
-      <article class="car-card"><figure><img src="img/g18.jpg" alt="Weisser Pick-up auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure><div class="bd"><h3>Nutzfahrzeuge</h3><p>Lieferwagen und Pick-ups für Handwerk und Firma.</p><div class="row"><span class="price">Preis auf Anfrage</span><a class="go" href="#probefahrt">Probefahrt <svg width="16" height="16"><use href="#i-r"/></svg></a></div></div></article>
+    <div class="wish rv" id="wish">
+      <div class="wish-pick">
+        <div class="grp"><span class="gl">Art</span>
+          <button type="button" data-g="art" data-v="einen SUV">SUV</button><button type="button" data-g="art" data-v="einen Kombi" aria-pressed="true">Kombi</button><button type="button" data-g="art" data-v="einen Kleinwagen">Kleinwagen</button><button type="button" data-g="art" data-v="einen Familienbus">Familienbus</button><button type="button" data-g="art" data-v="ein Nutzfahrzeug">Nutzfahrzeug</button><button type="button" data-g="art" data-v="ein Cabrio">Cabrio</button>
+        </div>
+        <div class="grp"><span class="gl">Budget</span>
+          <button type="button" data-g="bud" data-v="bis CHF 15'000">bis 15'000</button><button type="button" data-g="bud" data-v="bis CHF 25'000" aria-pressed="true">bis 25'000</button><button type="button" data-g="bud" data-v="bis CHF 35'000">bis 35'000</button><button type="button" data-g="bud" data-v="über CHF 35'000">über 35'000</button>
+        </div>
+        <div class="grp"><span class="gl">Eintausch</span>
+          <button type="button" data-g="ein" data-v=", mit Eintausch meines Autos">Ja</button><button type="button" data-g="ein" data-v="" aria-pressed="true">Nein</button>
+        </div>
+      </div>
+      <div class="wish-out">
+        <span class="gl">Ihre SMS an Martin Zeuch</span>
+        <p class="sms-bubble" id="wishText">–</p>
+        <div class="acts">
+          <a class="btn btn-nova" id="wishSms" href="sms:+41792229000"><svg><use href="#i-sms"/></svg>SMS senden</a>
+          <a class="btn btn-line" href="tel:+41792229000"><svg><use href="#i-tel"/></svg>Anrufen</a>
+        </div>
+      </div>
     </div>
-    <p class="note">Beispielfotos vom Platz. Aktuelle Fahrzeuge, Preise und Verfügbarkeit: 079 222 90 00.</p>
+    <div class="mini-row rv">
+      <figure><img src="img/g04.jpg" alt="SUV auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
+      <figure><img src="img/g24.jpg" alt="Kombi auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
+      <figure><img src="img/g18.jpg" alt="Pick-up auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
+      <figure><img src="img/g71.jpg" alt="Cabrio auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
+    </div>
+    <p class="note">Beispielfotos vom Platz, nicht der aktuelle Bestand.</p>
   </div>
 </section>
 
@@ -540,7 +668,7 @@ footer b{color:#D6D9DC}
     <div class="rv">
       <div class="eyebrow">Bischofszellerstrasse 108</div>
       <h2>Waschplatz gleich nebenan.</h2>
-      <div class="h24"><b>24 Std.</b><span>geöffnet – laut Tafel vor Ort</span></div>
+      <div class="h24"><b>24 Std.</b><span>Waschplatz geöffnet – laut Tafel vor Ort</span></div>
       <p class="lead">Auto kaufen, Auto waschen: am selben Ort in Gossau, direkt an der Bischofszellerstrasse.</p>
       <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
         <a class="btn btn-dark" href="tel:+41713939000"><svg><use href="#i-tel"/></svg>071 393 90 00</a>
@@ -564,7 +692,7 @@ footer b{color:#D6D9DC}
         <p class="t" id="dayT">–</p>
         <ul>
           <li><b>Probefahrt:</b> Zeit nach telefonischer Absprache</li>
-          <li><b>Waschplatz:</b> 24 Std. geöffnet (laut Tafel vor Ort)</li>
+          <li><b>Waschplatz:</b> 24 Std. geöffnet (laut Tafel vor Ort, nur Waschplatz)</li>
         </ul>
       </div>
       <div class="acts">
@@ -595,7 +723,7 @@ footer b{color:#D6D9DC}
 
 <footer>
   <div class="wrap">
-    <div><b>Garage Auto Nova AG</b> · Bischofszellerstrasse 108, 9200 Gossau SG · Sitz gemäss Handelsregister: Hochschorenstrasse 33, 9200 Gossau · UID CHE-110.644.145</div>
+    <div><b>Garage Auto Nova AG</b> · Bischofszellerstrasse 108, 9200 Gossau SG · Sitz gemäss Handelsregister: Hochschorenstrasse 33, 9200 Gossau (die Autos stehen an der Bischofszellerstrasse 108) · UID CHE-110.644.145</div>
     <div>Fotos: Garage Auto Nova AG (Google Maps) · Musterseite – Entwurf zur Ansicht</div>
   </div>
 </footer>
@@ -714,6 +842,27 @@ footer b{color:#D6D9DC}
     document.querySelectorAll('.pf .pane').forEach(p=>{ const on=p.dataset.k===k; p.classList.toggle('on',on); p.setAttribute('aria-hidden',!on); });
   });
 
+
+  // ---------- Firma: open from nav, offer SMS ----------
+  function openPane(k){ const b=sw.querySelector('[data-k="'+k+'"]'); if(b) b.click(); }
+  document.querySelectorAll('[data-open="firma"]').forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); openPane('firma'); document.getElementById('fuerwen').scrollIntoView({behavior:reduce?'auto':'smooth'}); }));
+  if(location.hash==='#firma') openPane('firma');
+  document.getElementById('offerteBtn').href='sms:+41792229000?&body='+encodeURIComponent('Grüezi Herr Zeuch, wir suchen für unsere Firma: [Fahrzeugtyp], ab [Datum]. Rechnung auf: [Firmenname]. Freundliche Grüsse');
+
+  // ---------- Übergabe track: fills once, then interactive ----------
+  const track=document.getElementById('track');
+  const tio=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ tio.disconnect(); track.classList.add('go'); setTimeout(()=>track.classList.add('live'),reduce?0:2000); } },{threshold:.3});
+  tio.observe(track);
+  addEventListener('scroll',()=>{ if(!track.classList.contains('go') && track.getBoundingClientRect().top<innerHeight*0.9){ track.classList.add('go'); setTimeout(()=>track.classList.add('live'),2000); } },{passive:true});
+
+  // ---------- Wunschauto SMS ----------
+  const wish=document.getElementById('wish'), wt=document.getElementById('wishText'), ws=document.getElementById('wishSms');
+  function upd(){ const v=g=>{const b=wish.querySelector('[data-g="'+g+'"][aria-pressed="true"]'); return b?b.dataset.v:'';};
+    const t='Grüezi Herr Zeuch, ich suche '+v('art')+' '+v('bud')+v('ein')+'. Was haben Sie gerade auf dem Platz?';
+    wt.textContent=t; ws.href='sms:+41792229000?&body='+encodeURIComponent(t); }
+  wish.querySelectorAll('.grp button').forEach(b=>{ if(!b.hasAttribute('aria-pressed')) b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',()=>{ wish.querySelectorAll('[data-g="'+b.dataset.g+'"]').forEach(x=>x.setAttribute('aria-pressed',x===b)); upd(); }); });
+  upd();
   // ---------- Wunschtag ----------
   const days=document.getElementById('days'), dayT=document.getElementById('dayT'), sms=document.getElementById('smsBtn');
   const WD=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'], WS=['So','Mo','Di','Mi','Do','Fr','Sa'];
