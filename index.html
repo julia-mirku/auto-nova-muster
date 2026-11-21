@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="de-CH" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex">
+<title>Garage Auto Nova AG · Gossau SG</title>
+<meta name="description" content="Occasionen für Private und Firmen, Waschplatz – Garage Auto Nova AG, Bischofszellerstrasse 108, 9200 Gossau SG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/g13.jpg">
+<style>
+:root{
+  --graphit:#22262A; --asphalt:#3A3F44; --asphalt-2:#2D3135;
+  --beton:#EEEFEC; --kreide:#F8F8F6; --weiss:#FFFFFF;
+  --nova:#C5E84B; --nova-soft:rgba(197,232,75,.35); --nova-ink:#4F6B00;
+  --linie:#D9DBD6; --grau:#60666C; --grau-hell:#A9AFB4;
+  --r:18px; --ease:cubic-bezier(.22,.7,.2,1);
+  --wide:"Archivo",system-ui,sans-serif; --text:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--kreide);color:var(--graphit);font:17px/1.55 var(--text);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h2,h3,.big-q{overflow-wrap:break-word;hyphens:manual}
+h1,h2,h3,.wide{font-family:var(--wide);font-stretch:125%;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4.2vw,48px);line-height:1.04;font-weight:850;margin:0 0 14px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.eyebrow{font:700 13px/1.2 var(--wide);font-stretch:112%;letter-spacing:.14em;text-transform:uppercase;color:var(--grau)}
+.eyebrow b{color:var(--nova-ink)}
+.lead{font-size:19px;color:var(--grau);max-width:640px;margin:0}
+
+/* ---------- Buttons (Req 1, 6, 10) ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;
+  font:700 16px/1 var(--text);text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:box-shadow .2s var(--ease),background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-nova{background:var(--nova);color:var(--graphit)}
+.btn-dark{background:var(--graphit);color:var(--weiss)}
+.btn-line{background:transparent;border-color:currentColor}
+.on-dark .btn-line{color:var(--weiss)}
+@media (hover:hover){
+  .btn-nova:hover{box-shadow:0 0 0 6px var(--nova-soft),0 8px 28px rgba(197,232,75,.45);background:#D2F062}
+  .btn-dark:hover{box-shadow:0 0 0 6px var(--nova-soft);background:#30353A}
+  .btn-line:hover{box-shadow:0 0 0 6px var(--nova-soft);border-color:var(--nova)}
+}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--nova);outline-offset:3px}
+
+/* ---------- Header ---------- */
+header.top{position:sticky;top:0;z-index:50;background:rgba(34,38,42,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--weiss)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.mark{white-space:nowrap;flex:none;display:flex;flex-direction:column;line-height:.92;text-decoration:none;font-family:var(--wide)}
+.mark small{font-weight:500;font-stretch:125%;font-size:11px;letter-spacing:.42em;color:var(--grau-hell)}
+.mark span{font-weight:900;font-stretch:125%;font-size:21px;letter-spacing:.02em}
+.mark span i{font-style:normal;color:var(--nova)}
+nav.links{display:flex;gap:4px;margin-left:auto}
+nav.links a{white-space:nowrap;font:600 15px/1 var(--text);text-decoration:none;padding:10px 12px;border-radius:999px;color:#DADDDF;transition:background-color .2s,color .2s,box-shadow .2s}
+@media (hover:hover){nav.links a:hover{background:rgba(197,232,75,.14);color:var(--weiss);box-shadow:inset 0 0 0 1px rgba(197,232,75,.5)}}
+.top .tel{white-space:nowrap;flex:none;margin-left:6px;min-height:42px;padding:0 16px;font-size:15px}
+@media (max-width:1140px){nav.links{display:none}.top .tel{margin-left:auto}}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--graphit);color:var(--weiss);padding:52px 0 0;position:relative}
+.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,5.2vw,74px);line-height:.96;font-weight:900;margin:14px 0 20px;white-space:nowrap}
+.hero h1 br.m{display:none}
+.hero h1 em{font-style:normal;color:var(--nova)}
+.hero .eyebrow{color:var(--grau-hell)}
+.hero .eyebrow b{color:var(--nova)}
+.hero p.lead{color:#C9CDD0}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
+.addr{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px;color:#C9CDD0}
+.addr a{text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:6px 10px;margin:-6px -10px;border-radius:10px;transition:background-color .2s,color .2s}
+@media (hover:hover){.ready .addr a:hover{background:rgba(197,232,75,.12);color:var(--weiss)}}
+.addr a{max-width:100%}.addr a span{min-width:0}
+.addr svg{flex:none;width:16px;height:16px;color:var(--nova)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;background:var(--asphalt-2);border:1px solid #474D53;font-size:14px;color:#E4E6E7;
+  transition:border-color .2s,box-shadow .2s,background-color .2s}
+.chip b{font:800 15px/1 var(--wide);font-stretch:110%;color:var(--weiss)}
+.chip .st{color:var(--nova);letter-spacing:1px}
+@media (hover:hover){.ready .chip:hover{border-color:var(--nova);box-shadow:0 0 0 4px rgba(197,232,75,.15);background:#33383D}}
+
+.hero:not(.ready) .hero-text a,.hero:not(.ready) .chip,.hero:not(.ready) .strip{pointer-events:none}
+/* Stage */
+.stage-col{position:relative}
+.stage{position:relative;aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:#3A3F44;box-shadow:0 30px 70px rgba(0,0,0,.45);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .3s ease-in-out}
+.stage img.b{opacity:0}
+.stage .tag{position:absolute;left:14px;bottom:14px;display:flex;align-items:baseline;gap:8px;padding:8px 13px;border-radius:12px;background:rgba(34,38,42,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:13px;color:#DADDDF}
+.stage .tag b{font:900 22px/1 var(--wide);font-stretch:125%;color:var(--nova);min-width:2.2ch;text-align:right;font-variant-numeric:tabular-nums}
+.stage .season{position:absolute;right:14px;top:14px;padding:6px 11px;border-radius:999px;background:rgba(34,38,42,.78);font:700 12px/1 var(--wide);font-stretch:112%;letter-spacing:.12em;text-transform:uppercase;color:var(--weiss);opacity:0;transition:opacity .3s}
+.playing .stage .season{opacity:1}
+.ctrl{display:flex;align-items:center;gap:12px;margin-top:16px;opacity:0;transform:translateY(6px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.ready .ctrl{opacity:1;transform:none}
+.ctrl .rb{width:46px;height:46px;flex:none;border-radius:50%;border:1.5px solid #555B61;background:var(--asphalt-2);color:var(--weiss);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,box-shadow .2s,background-color .2s}
+.ctrl .rb svg{width:18px;height:18px}
+@media (hover:hover){.ready .ctrl .rb:hover{border-color:var(--nova);box-shadow:0 0 0 5px rgba(197,232,75,.18);background:#363B40}}
+.ctrl input[type=range]{flex:1;min-width:0;appearance:none;-webkit-appearance:none;height:30px;background:transparent;cursor:pointer}
+.ctrl input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--nova) var(--p,100%),#4A5056 var(--p,100%))}
+.ctrl input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:#4A5056}
+.ctrl input[type=range]::-moz-range-progress{height:6px;border-radius:6px;background:var(--nova)}
+.ctrl input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-9px;border-radius:50%;background:var(--weiss);border:4px solid var(--nova);transition:box-shadow .2s}
+.ctrl input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--weiss);border:4px solid var(--nova)}
+@media (hover:hover){.ctrl input[type=range]:hover::-webkit-slider-thumb{box-shadow:0 0 0 7px rgba(197,232,75,.25)}}
+.hint{font-size:13px;color:var(--grau-hell);margin:10px 0 0;opacity:0;transition:opacity .45s .15s}
+.ready .hint{opacity:1}
+
+/* Filmstrip */
+.strip-wrap{margin-top:46px;border-top:1px solid #3A3F44;padding:18px 0 26px}
+.strip-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
+.strip-head span{font-size:14px;color:var(--grau-hell)}
+.strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 2px 12px;scrollbar-width:thin;scrollbar-color:#555B61 transparent}
+.strip button{flex:none;width:104px;aspect-ratio:4/3;border:0;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#3A3F44;scroll-snap-align:start;outline-offset:2px;
+  box-shadow:0 0 0 2px transparent;transition:box-shadow .2s,transform .2s var(--ease),opacity .2s;opacity:.62}
+.strip button img{width:100%;height:100%;object-fit:cover}
+.strip button.on{opacity:1;box-shadow:0 0 0 3px var(--nova)}
+@media (hover:hover){.ready .strip button:hover{opacity:1;box-shadow:0 0 0 3px rgba(197,232,75,.7);transform:translateY(-3px)}}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ---------- Map ---------- */
+.mapsec{background:var(--beton)}
+.map-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px;align-items:center;margin-top:34px}
+.map{position:relative}
+.map svg{width:100%;height:auto;display:block;overflow:visible}
+.map .land{fill:var(--weiss);stroke:#BFC3BE;stroke-width:2}
+.map .route{fill:none;stroke:var(--graphit);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke .2s,stroke-width .2s}
+.map.drawn .route{animation:draw 1.3s var(--ease) forwards;animation-delay:calc(var(--i)*.12s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.map .pin circle.dot{fill:var(--graphit);stroke:var(--weiss);stroke-width:3;transition:r .2s,fill .2s}
+.map .pin circle.halo{fill:var(--nova);opacity:0;transition:opacity .2s}
+.map .pin text{font:700 21px var(--text);fill:var(--graphit);paint-order:stroke;stroke:var(--beton);stroke-width:6px;stroke-linejoin:round;transition:fill .2s}
+.map .pin{opacity:0;transition:opacity .4s}
+.map.drawn .pin{opacity:1;transition-delay:calc(var(--i)*.12s + .9s)}
+.map.live .pin{cursor:pointer;transition-delay:0s}
+.map .pin.on .halo{opacity:.55}
+@media (hover:hover){.map.live .pin:hover .halo{opacity:.55}.map.live .pin:hover text{fill:var(--nova-ink)}}
+.map .pin.on circle.dot{fill:var(--nova-ink)}
+.map .pin.on text{fill:var(--nova-ink)}
+.route.on{stroke:var(--nova-ink)!important;stroke-width:4!important}
+.map .home circle{fill:var(--nova);stroke:var(--graphit);stroke-width:4}
+.map .home text{font:900 24px var(--wide);font-stretch:125%;fill:var(--graphit);paint-order:stroke;stroke:var(--beton);stroke-width:7px}
+.mapcard{background:var(--weiss);border-radius:var(--r);padding:28px;border:1px solid var(--linie);min-height:300px;display:grid;transition:box-shadow .2s,border-color .2s}
+.mapcard>div{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.mapcard>div.on{opacity:1;visibility:visible}
+.mapcard .reg{overflow-wrap:anywhere;font:900 clamp(21px,6.6vw,30px)/1.05 var(--wide);font-stretch:125%;margin:8px 0 14px}
+.mapcard .car{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--beton);font-weight:700;font-size:14px;margin-bottom:16px}
+.mapcard q{display:block;font-size:20px;line-height:1.45;quotes:"«" "»"}
+.mapcard .who{margin-top:14px;font-size:13px;color:var(--grau)}
+@media (hover:hover){.mapcard:hover{box-shadow:0 14px 40px rgba(34,38,42,.12);border-color:#C7CBC5}}
+.reglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.reglist button{font:600 14px/1 var(--text);padding:9px 13px;border-radius:999px;border:1.5px solid var(--linie);background:var(--weiss);cursor:pointer;color:var(--graphit);transition:border-color .2s,box-shadow .2s,background-color .2s}
+.reglist button.on{border-color:var(--graphit);background:var(--graphit);color:var(--weiss)}
+@media (hover:hover){.live-list .reglist button:hover{border-color:var(--nova-ink);box-shadow:0 0 0 4px var(--nova-soft)}}
+
+/* ---------- Privat | Firma ---------- */
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;padding:5px;border-radius:999px;background:var(--beton);position:relative;margin:26px 0 30px}
+.switch button{position:relative;z-index:1;border:0;background:none;font:800 16px/1 var(--wide);font-stretch:118%;padding:15px 30px;cursor:pointer;color:var(--grau);transition:color .25s;border-radius:999px}
+.switch button[aria-pressed=true]{color:var(--graphit)}
+.switch .knob{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:var(--nova);transition:transform .35s var(--ease),box-shadow .2s}
+.switch.firma .knob{transform:translateX(100%)}
+@media (hover:hover){.switch button[aria-pressed=false]:hover{color:var(--graphit)}.switch:hover .knob{box-shadow:0 0 0 5px var(--nova-soft)}}
+.pf{display:grid}
+.pf>.pane{grid-area:1/1;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .35s,transform .35s var(--ease),visibility .35s}
+.pf>.pane.on{opacity:1;visibility:visible;transform:none}
+.pane h3{font-size:clamp(24px,3vw,34px);line-height:1.1;font-weight:850;margin:0 0 18px}
+.ticks{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--weiss);border:1px solid var(--linie);transition:border-color .2s,box-shadow .2s,transform .2s var(--ease)}
+.ticks li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:6px;background:var(--nova) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 6.5' fill='none' stroke='%2322262A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+@media (hover:hover){.ticks li:hover{border-color:var(--nova-ink);box-shadow:0 0 0 4px var(--nova-soft);transform:translateX(3px)}}
+.quote{background:var(--graphit);color:var(--weiss);border-radius:var(--r);padding:26px 28px;transition:box-shadow .2s}
+.quote q{display:block;font-size:18px;line-height:1.5;quotes:"«" "»"}
+.quote .who{margin-top:12px;font-size:13px;color:var(--grau-hell)}
+@media (hover:hover){.quote:hover{box-shadow:0 0 0 5px var(--nova-soft)}}
+.pane figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
+.pane figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+@media (hover:hover){.pane figure:hover img{transform:scale(1.04)}}
+
+/* ---------- Übergabe ---------- */
+.ueber{background:var(--graphit);color:var(--weiss)}
+.ueber .eyebrow{color:var(--grau-hell)}
+.big-q{font:800 clamp(26px,3.6vw,44px)/1.15 var(--wide);font-stretch:112%;margin:16px 0 10px;max-width:980px;quotes:"«" "»"}
+.big-q::before{content:open-quote;color:var(--nova)}
+.big-q::after{content:close-quote;color:var(--nova)}
+.big-who{color:var(--grau-hell);font-size:14px;margin:0 0 44px}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:s}
+.step{background:var(--asphalt-2);border:1px solid #42474D;border-radius:var(--r);padding:22px 20px;counter-increment:s;transition:border-color .2s,box-shadow .2s,transform .2s var(--ease)}
+.step::before{content:"0" counter(s);display:block;font:900 15px/1 var(--wide);font-stretch:125%;color:var(--nova);margin-bottom:14px}
+.step h3{font-size:19px;margin:0 0 10px;font-weight:800;font-stretch:112%}
+.step q{display:block;font-size:14.5px;line-height:1.5;color:#C9CDD0;quotes:"«" "»"}
+.step small{display:block;margin-top:10px;color:#8E959B;font-size:12.5px}
+@media (hover:hover){.step:hover{border-color:var(--nova);box-shadow:0 0 0 5px rgba(197,232,75,.14);transform:translateY(-4px)}}
+
+/* ---------- Bewertung & Antwort ---------- */
+.rating{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:20px 0 34px}
+.rating .num{font:900 64px/1 var(--wide);font-stretch:125%}
+.rating .st{color:var(--nova-ink);font-size:22px;letter-spacing:2px}
+.pairs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pair{background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px;transition:box-shadow .2s,border-color .2s,transform .2s var(--ease)}
+@media (hover:hover){.pair:hover{border-color:#C2C7C0;box-shadow:0 0 0 5px var(--nova-soft),0 16px 40px rgba(34,38,42,.10);transform:translateY(-3px)}}
+.pair .c q,.pair .o q{display:block;quotes:"«" "»"}
+.pair .c q{font-size:16.5px}
+.pair .meta{font-size:13px;color:var(--grau);margin-top:6px}
+.pair .meta .st{color:var(--nova-ink);letter-spacing:1px}
+.pair .o{margin-top:auto;background:var(--beton);border-radius:14px;padding:14px 16px;position:relative;font-size:15px}
+.pair .o::before{content:"Antwort vom Inhaber";display:block;font:700 11px/1 var(--wide);font-stretch:112%;letter-spacing:.12em;text-transform:uppercase;color:var(--nova-ink);margin-bottom:8px}
+.src{font-size:13px;color:var(--grau);margin-top:18px}
+
+/* ---------- Fahrzeuge ---------- */
+.cars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.car-card{background:var(--weiss);border-radius:var(--r);overflow:hidden;border:1px solid var(--linie);display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s var(--ease),border-color .2s}
+.car-card figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+.car-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.car-card .bd{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.car-card h3{margin:0;font-size:21px;font-weight:850}
+.car-card p{margin:0;color:var(--grau);font-size:15px}
+.car-card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px;flex-wrap:wrap}
+.price{display:inline-flex;align-items:center;padding:8px 13px;border-radius:10px;background:var(--beton);font:800 14px/1 var(--wide);font-stretch:110%;transition:background-color .2s,box-shadow .2s,color .2s}
+.car-card .go{font-weight:700;font-size:15px;text-decoration:none;display:inline-flex;gap:6px;align-items:center;padding:8px 10px;border-radius:10px;transition:background-color .2s,color .2s}
+@media (hover:hover){
+  .car-card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(34,38,42,.14);border-color:#C2C7C0}
+  .car-card:hover img{transform:scale(1.05)}
+  .price:hover,.car-card:hover .price{background:var(--nova);box-shadow:0 0 0 5px var(--nova-soft)}
+  .car-card .go:hover{background:var(--beton);color:var(--nova-ink)}
+}
+.note{font-size:14px;color:var(--grau);margin-top:16px}
+
+/* ---------- Waschplatz ---------- */
+.wash{background:var(--kreide)}
+.wash-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:44px;align-items:center}
+.wash figure{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.wash figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+@media (hover:hover){.wash figure:hover img{transform:scale(1.04)}}
+.h24{display:inline-flex;align-items:baseline;gap:10px;margin:18px 0 8px;padding:14px 18px;border-radius:16px;background:var(--graphit);color:var(--weiss);transition:box-shadow .2s}
+.h24 b{font:900 44px/1 var(--wide);font-stretch:125%;color:var(--nova)}
+@media (hover:hover){.h24:hover{box-shadow:0 0 0 6px var(--nova-soft)}}
+
+/* ---------- Wunschtag ---------- */
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin:30px 0 18px}
+.day{border:2px solid var(--linie);background:var(--weiss);border-radius:16px;padding:14px 6px 12px;text-align:center;cursor:pointer;font:inherit;color:inherit;
+  transition:border-color .2s,box-shadow .2s,background-color .2s}
+.day .wd{display:block;font:800 14px/1 var(--wide);font-stretch:118%;text-transform:uppercase;letter-spacing:.06em;color:var(--grau)}
+.day .dn{display:block;font:900 30px/1.1 var(--wide);font-stretch:125%;margin-top:6px}
+.day .mo{display:block;font-size:12.5px;color:var(--grau)}
+.day.today .wd::after{content:" · heute";text-transform:none;letter-spacing:0;font-weight:600;font-family:var(--text);color:var(--nova-ink)}
+.day[aria-pressed=true]{border-color:var(--graphit);background:var(--graphit);color:var(--weiss)}
+.day[aria-pressed=true] .wd,.day[aria-pressed=true] .mo{color:#C9CDD0}
+.day[aria-pressed=true].today .wd::after{color:var(--nova)}
+@media (hover:hover){.day:hover{border-color:var(--nova-ink);box-shadow:0 0 0 4px var(--nova-soft)}}
+.daycard{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:24px 26px;transition:box-shadow .2s}
+.daycard .t{font:900 26px/1.15 var(--wide);font-stretch:118%;margin:0 0 8px}
+.daycard ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;color:var(--grau);font-size:15.5px}
+.daycard ul b{color:var(--graphit)}
+.daycard .acts{display:flex;gap:10px;flex-wrap:wrap}
+@media (hover:hover){.daycard:hover{box-shadow:0 12px 36px rgba(34,38,42,.10)}}
+
+/* ---------- Kontakt ---------- */
+.kontakt{background:var(--graphit);color:var(--weiss)}
+.k-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:stretch}
+.k-list{display:grid;gap:12px;margin:24px 0 28px}
+.k-item{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:16px;background:var(--asphalt-2);border:1px solid #42474D;text-decoration:none;transition:border-color .2s,box-shadow .2s,background-color .2s}
+.k-item svg{width:22px;height:22px;color:var(--nova);flex:none}
+.k-item span{display:block;font-size:13px;color:var(--grau-hell)}
+.k-item b{font-size:18px}
+@media (hover:hover){a.k-item:hover,.k-item:hover{border-color:var(--nova);box-shadow:0 0 0 5px rgba(197,232,75,.15);background:#33383D}}
+.mapframe{border-radius:22px;overflow:hidden;min-height:380px;background:#3A3F44;position:relative;transition:box-shadow .2s}
+.mapframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35)}
+@media (hover:hover){.mapframe:hover{box-shadow:0 0 0 6px rgba(197,232,75,.18)}}
+footer{background:#1A1D20;color:#9097A0;font-size:13.5px;padding:26px 0 30px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between}
+footer b{color:#D6D9DC}
+
+/* ---------- Mobile call bar ---------- */
+.callbar{display:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}.pairs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  section{padding:70px 0}
+  .hero{padding-top:30px}
+  .hero-grid,.map-grid,.wash-grid,.k-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+  .pf>.pane{grid-template-columns:minmax(0,1fr);gap:22px}
+  .cars{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .days{grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+  .daycard{grid-template-columns:minmax(0,1fr)}
+  .mapcard{min-height:250px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .top .wrap{height:60px;gap:10px}
+  .mark span{font-size:17px}.mark small{font-size:9.5px}
+  .top .tel{min-height:40px;padding:0 12px;font-size:14px}
+  .top .tel .lbl{display:none}
+  .hero h1{font-size:clamp(38px,11.5vw,56px);margin:10px 0 14px}
+  .hero p.lead{font-size:16.5px}
+  .hero .cta{margin:18px 0 16px;gap:10px}
+  .hero .cta .btn{flex:1 1 auto;justify-content:center;min-height:48px;padding:0 16px}
+  .facts{margin-top:16px}
+  .stage{border-radius:16px}
+  .strip button{width:84px}
+  .steps,.pairs,.cars{grid-template-columns:minmax(0,1fr)}
+  .days{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .day .dn{font-size:24px}
+  .switch button{padding:14px 20px;font-size:15px}
+  .mapcard{padding:22px}
+  .mapcard q{font-size:18px}
+  .map .pin text{display:none}
+  .map .pin.on text{display:block;font-size:46px;stroke-width:10px}
+  .map .home text{font-size:40px;stroke-width:10px}
+  .map .pin circle.dot{r:13}
+  .map .home circle{r:17}
+  .h24 b{white-space:nowrap}
+  .h24 b{font-size:36px}
+  .daycard{padding:20px}
+  .daycard .acts .btn{flex:1 1 auto;justify-content:center}
+  footer{padding-bottom:96px}
+  .callbar{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:60;gap:8px}
+  .callbar .btn{flex:1;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  .callbar{opacity:0;transform:translateY(90px);pointer-events:none;transition:opacity .3s,transform .35s var(--ease)}
+  .callbar.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:360px){.hero .cta .btn{font-size:15px}.days{gap:5px}.day .wd{font-size:12px}}
+@media (max-height:500px) and (orientation:landscape){
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+  .hero h1{font-size:40px}
+  .hero p.lead,.hero .eyebrow,.facts{display:none}
+  .hero .cta{margin:12px 0 12px}
+  .hero{padding-top:18px}.hero-grid{align-items:start}
+  .hero-text{display:flex;flex-direction:column}.hero .addr{order:-1;margin-bottom:4px}
+  .hero h1{margin:6px 0 4px}
+  .hero .cta .btn{min-height:44px}
+  .callbar{display:none}footer{padding-bottom:30px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 17H3v-5l2-5h11l3 5h2v5h-2M7 17h8"/><circle cx="7" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Garage Auto Nova AG – nach oben"><small>GARAGE</small><span>AUTO <i>NOVA</i></span></a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="#schweiz">Unsere Kunden</a>
+      <a href="#fuerwen">Privat &amp; Firma</a>
+      <a href="#uebergabe">Übergabe</a>
+      <a href="#fahrzeuge">Fahrzeuge</a>
+      <a href="#waschplatz">Waschplatz</a>
+      <a href="#probefahrt">Probefahrt</a>
+    </nav>
+    <a class="btn btn-nova tel free" href="tel:+41792229000"><svg><use href="#i-tel"/></svg><span class="lbl">079 222 90 00</span><span class="sr" style="position:absolute;left:-9999px">Anrufen</span></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO: Ein Platz. 77 Autos. ================= -->
+<section class="hero on-dark" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="eyebrow"><b>Gossau SG</b> · Occasionen · Firmenfahrzeuge · Waschplatz</div>
+        <h1>Ein Platz.<br><em>77 Autos.</em></h1>
+        <p class="lead">Jedes Auto auf unseren Fotos stand genau hier – beim Bäumchen an der Bischofszellerstrasse&nbsp;108. Für Private und für Firmen, persönlich übergeben von Martin&nbsp;Zeuch.</p>
+        <div class="cta">
+          <a class="btn btn-nova" href="tel:+41792229000"><svg><use href="#i-tel"/></svg>079 222 90 00</a>
+          <a class="btn btn-line" href="#probefahrt"><svg><use href="#i-car"/></svg>Probefahrt vereinbaren</a>
+        </div>
+        <div class="addr">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Garage+Auto+Nova+AG,+Bischofszellerstrasse+108,+9200+Gossau" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span>Bischofszellerstrasse 108, 9200&nbsp;Gossau</span></a>
+        </div>
+        <div class="facts">
+          <span class="chip"><b>4,9</b><span class="st">★★★★★</span>Google · 42 Bewertungen</span>
+          <span class="chip"><b>42 / 42</b>persönlich beantwortet</span>
+        </div>
+      </div>
+      <div class="stage-col">
+        <div class="stage" id="stage" aria-roledescription="Fotoschieber" aria-label="77 Fotos vom selben Platz">
+          <img class="a" id="imgA" src="img/g13.jpg" alt="Auto auf dem Platz der Garage Auto Nova" width="1200" height="900">
+          <img class="b" id="imgB" src="img/g13.jpg" alt="" width="1200" height="900">
+          <span class="season" id="season">Winter</span>
+          <span class="tag"><b id="num">13</b> von 77 Fotos</span>
+        </div>
+        <div class="ctrl">
+          <button class="rb" id="prev" aria-label="Vorheriges Auto"><svg><use href="#i-l"/></svg></button>
+          <input type="range" id="slider" min="1" max="77" value="76" aria-label="Foto wählen, 1 bis 77">
+          <button class="rb" id="next" aria-label="Nächstes Auto"><svg><use href="#i-r"/></svg></button>
+        </div>
+        <p class="hint">Schieben, wischen oder ein Foto unten antippen – der Platz bleibt, die Autos wechseln.</p>
+      </div>
+    </div>
+    <div class="strip-wrap">
+      <div class="strip-head"><span class="eyebrow">Alle 77 Fotos · vom selben Platz</span><span>Fotos: Garage Auto Nova AG</span></div>
+      <div class="strip" id="strip" role="list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Schweiz-Karte ================= -->
+<section class="mapsec" id="schweiz">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Aus den Antworten von Martin Zeuch</div>
+      <h2>Von Gossau in die ganze Schweiz.</h2>
+      <p class="lead">Auf jede Google-Bewertung antwortet er selbst – und schickt Grüsse dorthin, wo das Auto jetzt zu Hause ist.</p>
+    </div>
+    <div class="map-grid">
+      <div class="map rv" id="map">
+        <svg viewBox="0 0 1000 651" role="img" aria-label="Schweizer Karte mit Wegen von Gossau zu acht Regionen">
+          <path class="land" d="M989.7,313.2L988.9,323.4L988.2,326.1L986.6,328.3L981.9,333.6L982.7,338.4L984.2,343.3L984.2,347.6L981.9,351.3L978.0,354.0L977.2,356.7L977.2,360.4L977.2,364.7L974.8,368.5L972.5,371.2L971.7,373.8L973.3,380.3L977.2,384.6L986.6,385.6L991.3,389.4L992.8,395.8L992.8,403.9L990.5,411.9L989.7,414.1L988.2,416.7L984.2,417.3L968.6,413.5L960.8,414.1L957.6,413.5L955.3,412.4L954.5,410.8L952.9,409.2L951.4,408.2L942.0,404.9L941.2,401.2L942.8,394.7L942.0,391.0L938.8,388.3L933.4,388.3L912.2,394.2L910.7,395.8L909.1,398.0L906.8,408.2L905.2,410.8L900.5,415.7L898.2,418.3L898.2,420.5L898.2,427.5L897.4,430.7L897.4,433.9L898.2,436.0L898.9,437.6L900.5,439.3L897.4,445.7L900.5,450.0L906.8,452.7L916.9,454.3L920.1,455.9L921.6,459.6L920.1,466.6L918.5,468.7L913.8,472.5L912.2,475.7L911.5,480.0L911.5,483.2L912.2,485.9L913.8,489.1L923.2,498.2L925.5,504.1L923.2,510.0L916.9,514.3L907.5,517.5L900.5,517.5L900.5,510.6L898.2,504.7L889.5,497.2L886.4,492.9L884.8,485.9L884.8,479.5L883.3,474.6L877.8,470.9L873.9,469.8L869.2,469.3L859.8,470.9L845.7,478.4L841.0,480.0L837.9,479.5L832.4,476.3L830.8,476.3L827.7,478.9L827.7,482.2L827.7,485.9L827.7,488.6L824.6,493.4L820.7,495.0L795.6,494.5L790.2,492.9L786.2,489.7L783.1,485.9L779.2,474.1L776.8,472.5L772.2,469.8L770.6,468.2L769.8,466.6L770.6,461.8L769.0,431.2L768.2,429.1L766.7,429.6L763.5,432.3L762.0,434.4L761.2,436.6L759.6,438.2L757.3,439.3L755.7,438.7L750.2,433.4L750.2,429.6L745.5,428.0L735.4,429.6L731.5,433.4L727.5,440.9L726.0,448.9L727.5,453.2L730.7,455.3L730.7,458.6L730.7,462.3L730.7,467.1L733.8,478.4L733.8,482.2L732.2,489.1L726.0,502.5L722.8,514.3L720.5,517.5L718.2,519.7L715.8,520.8L713.5,522.9L711.9,525.6L711.1,529.3L709.5,532.6L693.9,543.8L689.2,549.7L688.4,554.0L689.2,561.0L688.4,564.7L686.8,568.0L684.5,569.0L679.8,570.6L674.3,574.9L673.5,578.7L677.5,589.9L670.4,596.4L669.6,597.4L669.6,598.0L669.6,599.1L670.4,599.6L672.8,602.3L674.3,607.6L675.9,610.9L678.2,611.9L682.9,613.0L685.3,614.1L687.6,619.4L686.8,624.8L681.4,635.5L674.3,644.6L668.1,643.0L661.0,639.8L652.4,642.5L653.2,637.7L654.0,633.9L655.5,630.2L654.8,624.8L654.0,620.5L651.6,616.2L647.7,609.2L646.1,604.4L644.6,602.3L643.0,601.2L630.5,594.2L627.4,593.2L623.5,592.6L623.5,592.1L625.0,590.5L628.1,581.4L634.4,573.9L637.5,566.3L632.1,558.8L628.9,557.8L622.7,557.8L618.8,557.8L617.2,556.2L615.6,553.5L614.8,552.9L614.1,552.9L612.5,553.5L609.4,556.2L607.8,557.2L603.9,557.2L593.7,551.3L589.8,549.7L587.5,548.6L573.4,527.7L567.1,521.3L561.6,518.6L556.1,515.9L551.5,512.7L549.1,507.9L548.3,499.8L549.1,491.8L553.0,475.2L553.8,466.1L553.8,456.4L552.2,449.4L549.9,445.2L543.6,444.1L540.5,444.6L531.1,446.8L525.6,450.0L520.9,454.8L518.6,458.6L519.4,460.2L520.9,461.2L520.9,464.5L520.1,467.1L517.8,469.8L515.5,472.0L509.2,475.2L498.2,489.1L493.5,492.3L484.1,494.5L479.5,496.6L475.5,500.9L473.2,504.1L472.4,506.8L473.2,508.4L477.9,512.7L484.9,525.1L484.9,536.8L480.2,547.0L470.8,555.6L468.5,556.2L464.6,556.7L462.2,558.3L460.7,562.1L459.9,565.3L459.9,569.0L459.1,578.1L458.3,578.7L456.0,583.5L456.0,584.0L453.6,587.8L452.1,588.9L449.7,589.9L434.1,593.2L430.9,595.8L428.6,600.7L428.6,606.6L423.9,606.6L423.9,607.1L423.1,610.3L423.1,611.9L422.3,613.0L420.0,614.6L418.4,614.6L414.5,613.5L409.0,613.5L398.1,609.8L396.5,609.8L394.1,610.9L392.6,610.9L390.2,610.3L389.5,609.2L385.5,603.3L382.4,600.1L379.3,598.0L356.6,592.6L353.5,594.2L351.1,598.0L348.8,601.2L344.1,601.7L337.8,605.0L324.5,614.1L317.5,616.7L301.8,615.1L298.7,616.2L292.4,620.0L279.1,625.3L272.8,626.9L265.8,626.9L258.8,625.3L254.1,622.1L243.9,611.4L242.3,608.7L241.5,605.5L240.0,599.6L237.6,593.2L236.1,589.9L235.3,588.9L220.4,572.2L215.7,570.1L214.1,570.6L212.6,572.2L211.0,573.3L208.7,573.3L207.1,571.7L206.3,570.6L207.1,569.6L207.1,566.9L207.1,563.1L207.1,560.4L206.3,560.4L207.1,558.8L208.7,556.7L210.2,554.0L211.0,551.9L207.1,548.6L189.9,544.9L188.3,539.5L189.9,528.3L193.8,517.0L201.6,502.0L196.9,493.4L189.1,484.8L185.2,477.9L186.0,474.1L191.4,467.1L193.0,461.8L193.0,459.1L193.0,455.9L190.7,452.7L187.5,451.1L155.4,442.5L140.6,442.5L126.5,445.2L108.5,458.0L101.4,459.6L93.6,460.2L87.4,462.3L80.3,468.2L74.1,476.8L69.4,483.2L68.6,487.5L69.4,490.7L70.9,496.1L70.9,497.2L73.3,502.5L74.1,503.6L76.4,505.2L80.3,503.1L81.9,504.1L82.7,511.1L77.2,517.5L63.1,526.7L52.1,540.1L45.1,543.3L38.1,540.1L27.9,540.6L17.7,542.7L13.0,546.0L15.4,539.0L17.7,535.8L17.7,533.1L13.8,528.3L12.2,524.0L13.0,520.2L17.7,517.0L31.0,510.6L31.8,510.0L34.1,510.6L34.9,511.1L36.5,510.6L41.2,509.5L42.0,507.4L42.0,504.1L42.0,500.9L43.5,491.8L44.3,489.1L47.4,482.2L51.4,473.6L51.4,469.8L48.2,465.0L45.1,461.8L34.9,454.8L33.4,454.3L35.7,452.1L36.5,450.0L35.7,447.8L35.7,445.2L35.7,444.1L34.9,443.0L34.9,441.4L34.9,439.8L35.7,437.6L38.1,435.0L45.9,422.1L53.7,412.4L48.2,406.5L47.4,402.3L50.6,398.5L79.5,371.7L95.2,363.1L97.5,361.0L103.0,354.5L110.1,350.8L112.4,349.2L114.8,345.9L115.5,343.3L115.5,337.9L114.0,336.3L113.2,334.7L112.4,332.5L112.4,331.5L116.3,320.7L117.9,318.1L117.9,317.0L118.7,315.4L119.4,310.6L118.7,307.3L115.5,301.4L114.8,298.8L117.9,287.5L128.8,281.6L151.5,274.1L166.4,263.4L171.1,255.9L168.8,250.0L171.9,245.1L173.4,243.0L178.9,240.8L179.7,239.2L180.5,238.7L183.6,237.1L183.6,231.7L189.9,229.0L204.0,216.7L204.8,216.2L208.7,209.2L214.9,202.8L229.8,192.0L229.0,184.0L229.8,177.6L234.5,173.3L236.1,173.3L237.6,172.7L240.8,168.5L243.1,167.4L244.7,166.8L247.0,165.2L248.6,162.0L246.2,158.8L243.1,155.6L240.0,152.9L236.1,155.0L210.2,157.7L211.0,153.4L214.1,148.6L217.3,144.3L222.8,141.1L222.8,135.2L229.0,133.6L232.1,132.0L235.3,128.8L236.8,126.1L236.1,122.3L233.7,118.0L233.7,114.8L237.6,113.2L239.2,112.1L241.5,111.6L243.1,112.1L245.5,113.2L250.9,114.3L261.9,112.1L266.6,113.2L269.7,114.8L272.8,115.4L278.3,114.8L274.4,123.9L276.0,129.3L280.7,132.0L286.9,133.6L287.7,134.7L288.5,135.7L289.3,136.8L290.8,137.4L292.4,137.4L300.2,133.6L306.5,132.5L312.8,132.5L321.4,133.1L323.7,132.5L327.6,130.9L330.8,126.6L331.5,125.0L332.3,122.3L332.3,120.2L330.8,119.1L330.0,118.0L329.2,116.4L329.2,114.3L331.5,113.8L335.5,114.8L336.2,115.4L337.8,116.4L340.9,117.0L344.1,113.8L344.8,113.2L344.8,112.7L344.8,111.6L344.8,111.1L343.3,108.9L342.5,107.3L342.5,106.2L344.1,105.7L346.4,106.2L348.0,105.7L348.8,104.1L348.8,100.9L348.0,100.9L344.8,98.2L344.1,97.7L352.7,91.2L353.5,90.2L358.9,86.9L366.8,84.3L377.7,81.0L382.4,80.5L380.1,88.6L377.7,90.7L372.2,90.7L371.5,90.7L380.1,95.0L383.2,96.6L387.9,97.1L397.3,95.0L405.9,93.4L409.8,91.2L413.7,86.9L417.6,81.0L420.8,82.7L434.1,83.2L435.6,84.8L436.4,87.5L437.2,90.7L437.2,91.8L465.4,91.8L475.5,89.6L477.9,88.6L478.7,86.9L479.5,85.3L481.0,83.2L483.4,82.1L488.1,79.4L492.0,78.4L493.5,76.8L494.3,75.1L495.1,74.6L506.8,72.5L510.8,72.5L517.0,74.1L519.4,74.6L520.1,75.7L521.7,78.9L523.3,82.1L525.6,83.2L533.5,85.3L547.5,85.3L548.3,85.3L553.8,84.3L554.6,82.7L556.9,77.3L563.2,73.0L570.2,72.5L573.4,75.7L575.7,80.0L576.5,80.5L578.1,82.7L581.2,81.6L582.0,81.0L582.8,79.4L582.8,76.8L582.8,74.6L583.5,72.5L582.8,71.4L582.8,70.3L582.0,68.7L582.8,67.1L583.5,66.6L584.3,66.0L585.9,66.0L585.9,66.6L585.9,68.2L587.5,69.2L588.2,61.7L586.7,61.2L585.9,60.7L582.8,60.1L580.4,59.6L569.5,61.2L566.3,62.8L563.2,65.0L560.1,66.6L556.1,66.6L551.5,64.4L546.0,60.1L545.2,59.6L541.3,58.5L542.8,55.3L542.1,52.6L541.3,49.9L542.1,47.8L543.6,45.1L549.1,42.4L551.5,40.3L553.0,33.9L554.6,31.7L556.9,27.4L559.3,26.3L561.6,26.3L573.4,24.2L576.5,22.6L574.1,17.2L578.1,15.6L583.5,15.6L587.5,17.8L587.5,19.9L588.2,24.2L588.2,28.0L590.6,29.6L593.7,28.0L594.5,21.0L596.8,18.8L599.2,19.9L601.5,22.6L603.1,26.3L604.7,29.0L607.0,29.6L609.4,29.0L611.7,29.6L613.3,32.8L612.5,33.9L609.4,38.1L608.6,40.3L609.4,43.0L611.7,45.1L611.7,47.3L612.5,49.4L624.2,49.4L621.9,47.3L624.2,40.8L629.7,41.4L636.8,45.1L642.2,50.5L638.3,51.6L638.3,53.7L641.5,56.9L642.2,56.9L648.5,61.7L653.2,62.8L661.8,62.3L669.6,59.6L673.5,55.8L677.5,54.2L701.7,56.9L713.5,56.9L716.6,61.7L725.2,61.7L733.0,63.3L793.3,100.3L794.1,105.7L794.8,107.9L801.1,117.5L808.9,120.7L815.2,126.6L815.2,140.0L812.8,144.9L804.2,155.0L803.5,158.3L802.7,163.6L801.9,165.8L794.1,174.9L787.0,186.7L783.9,192.6L780.0,203.3L779.2,214.0L780.8,219.4L783.1,223.7L785.5,229.0L785.5,235.5L783.1,239.8L780.0,243.5L777.6,246.7L777.6,249.4L782.3,251.0L795.6,253.2L800.3,252.1L804.2,253.2L816.0,251.6L819.1,252.1L860.6,265.0L859.8,268.7L861.4,269.3L862.2,269.3L862.9,270.3L862.9,271.9L862.2,275.2L861.4,282.7L861.4,285.9L861.4,289.1L864.5,292.9L869.2,297.2L892.7,304.7L901.3,312.7L906.0,315.4L915.4,318.6L918.5,318.6L920.1,318.6L925.5,317.0L934.9,312.2L937.3,308.9L938.1,306.8L938.1,304.1L938.8,299.8L942.8,294.5L945.9,293.4L949.8,295.0L955.3,294.5L956.1,288.6L959.2,281.1L964.7,275.2L970.9,271.4L972.5,270.9L974.1,271.4L974.8,271.9L977.2,274.6L981.9,282.1L988.9,287.5L991.3,290.2L992.1,295.5L989.7,306.3L989.7,313.2Z"/>
+          <g id="routes"></g>
+          <g id="pins"></g>
+          <g class="home" transform="translate(726.5 135)"><circle r="13"/><text x="-22" y="-12" text-anchor="end">Gossau</text></g>
+        </svg>
+      </div>
+      <div class="live-list rv" id="mapside">
+        <div class="mapcard" id="mapcard"></div>
+        <div class="reglist" id="reglist"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Privat | Firma ================= -->
+<section id="fuerwen">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Für wen</div>
+      <h2>Ihr nächstes Auto – oder das nächste für die Firma.</h2>
+    </div>
+    <div class="switch rv" id="switch" role="group" aria-label="Privat oder Firma">
+      <span class="knob"></span>
+      <button aria-pressed="true" data-k="privat">Privat</button>
+      <button aria-pressed="false" data-k="firma">Firma</button>
+    </div>
+    <div class="pf rv">
+      <div class="pane on" data-k="privat">
+        <div>
+          <h3>Erstes Auto, Familienauto oder etwas Feines für die Ausfahrt.</h3>
+          <ul class="ticks">
+            <li>Zeit für alle Fragen – auch beim allerersten Auto.</li>
+            <li>Kombis, SUVs und Busse für die Familie.</li>
+            <li>Eintausch Ihres bisherigen Autos auf Anfrage.</li>
+          </ul>
+          <div class="quote"><q>Dank der Garage Auto Nova haben wir endlich das perfekte,grosszügige Familienauto,vielen Dank!!</q><div class="who">Franziska Siegrist · Google-Bewertung ★★★★★</div></div>
+        </div>
+        <figure><img src="img/g67.jpg" alt="Schwarzer VW-Bus auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
+      </div>
+      <div class="pane" data-k="firma" aria-hidden="true">
+        <div>
+          <h3>Ein Fahrzeug mehr für die Flotte – Papierkram inklusive.</h3>
+          <ul class="ticks">
+            <li>Nutzfahrzeuge wie der VW Caddy.</li>
+            <li>Geschäftsautos wie der Skoda Kamiq.</li>
+            <li>Beratung, Papiere und Übergabe aus einer Hand.</li>
+          </ul>
+          <div class="quote"><q>Wir durften unsere Flotte um ein weiteres Fahrzeug erweitern und sind rundum begeistert!</q><div class="who">Patric Schmid · Google-Bewertung ★★★★★</div></div>
+        </div>
+        <figure><img src="img/g50.jpg" alt="Roter Lieferwagen auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Übergabe ================= -->
+<section class="ueber on-dark" id="uebergabe">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Die Übergabe</div>
+      <p class="big-q">Das gehört zu einer richtigen Ablieferung dazu, darum verrechnen wir auch keine Ablieferungs&shy;pauschale.</p>
+      <p class="big-who">Martin Zeuch, Antwort auf eine Google-Bewertung</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><h3>Probefahrt</h3><q>Präsentation und Probefahrt vom feinsten!</q><small>Bruno Schwab</small></div>
+      <div class="step"><h3>MFK</h3><q>reibungslos von probefahrt über mfk bis zur ablieferung 5 sterne!</q><small>Lazar Mitrovic</small></div>
+      <div class="step"><h3>Versicherung &amp; Zulassung</h3><q>Er hat wegen der Versicherung und wegen der Zulassung alles Organisiert.</q><small>christofer pereira</small></div>
+      <div class="step"><h3>Alle Funktionen erklärt</h3><q>Die Übernahme des Autos hat einwandfrei funktioniert inkl. Erklärung aller Funktionen.</q><small>Jacqueline Wäspe</small></div>
+      <div class="step"><h3>Eintausch</h3><q>Sehr faires Angebot auch beim Eintauschfahrzeug und top Zustand des neuen Fahrzeuges</q><small>Engelbert Helfenberger</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Bewertung & Antwort ================= -->
+<section id="bewertungen">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Bewertung und Antwort</div>
+      <h2>Jede Bewertung bekommt eine Antwort.</h2>
+      <div class="rating"><span class="num">4,9</span><div><div class="st">★★★★★</div><div>42 Bewertungen auf Google · 42 Antworten vom Inhaber</div></div></div>
+    </div>
+    <div class="pairs rv">
+      <article class="pair"><div class="c"><q>Von A-Z Top! Ich liebe mein neues Auto. Der weite Weg hat sich definitiv gelohnt.</q><div class="meta"><span class="st">★★★★★</span> Dario Hischier</div></div><div class="o"><q>Vom Wallis in die Ostschweiz! Danke Dario, dass Du bei mir den T-Roc gekauft hast. Ich hoffe, Du hast viel Freude damit. Liebe Grüsse</q></div></article>
+      <article class="pair"><div class="c"><q>Sehr gute Beratung, sehr zu empfehlen! Die Übernahme des Autos hat einwandfrei funktioniert inkl. Erklärung aller Funktionen. Wir sind sehr zufrieden mit unserem Geschäftsauto.</q><div class="meta"><span class="st">★★★★★</span> Jacqueline Wäspe</div></div><div class="o"><q>Der Dank geht zurück an euch, auch für die guten Noten. Gerne habe ich euch beim Autokauf begleitet. Mit dem Skoda Kamiq habt ihr ein zweckmässiges und praktisches Firmenauto ausgewählt. Wie Skoda sagt: CLEVER!</q></div></article>
+      <article class="pair"><div class="c"><q>Sehr Freundlich und Zuvorkommend, mein Erstes auto Gekauft und habe mich in Hervorragenden händen Gefühlt</q><div class="meta"><span class="st">★★★★★</span> Simon Schöb</div></div><div class="o"><q>Dein erstes Auto soll dir immer in guter Erinnerung bleiben. Ich wünsche dir viel Freude am neuen Ford Puma ST.</q></div></article>
+      <article class="pair"><div class="c"><q>Alles top! Ich bin mit dem Fahrzeug sehr zufrieden. Martin Zeuch habe ich als ehrlichen, freundlichen und angenehmen Verkäufer kennengelernt – etwas, das in dieser Branche leider immer seltener wird. Nochmals vielen herzlichen Dank!</q><div class="meta"><span class="st">★★★★★</span> Kay Locher</div></div><div class="o"><q>Danke, Herr Locher, für die Top-Bewertung. Es freut mich, dass das Audi Cabrio trotz seiner 18 Jahre Ihre Erwartungen erfüllt.</q></div></article>
+      <article class="pair"><div class="c"><q>Ich kannte die Garage NOVA in Gossau SG nicht. Auf der Suche nach einem Seat wurde ich dort fündig. Der Inhaber empfing mich so freundlich, was ich bei einer Garage schon sehr lange nicht mehr erlebt hatte.</q><div class="meta"><span class="st">★★★★★</span> Irene Frei (Auszug)</div></div><div class="o"><q>Schön, dass Sie sich wohl gefühlt haben. Mit dem Seat Ibiza haben Sie einen pfiffigen Wagen mit moderner Technik und viel Sicherheit.</q></div></article>
+      <article class="pair"><div class="c"><q>mein zweites auto bei herr zeuch gekauft, top service alles wie abgemacht. reibungslos von probefahrt über mfk bis zur ablieferung 5 sterne!</q><div class="meta"><span class="st">★★★★★</span> Lazar Mitrovic</div></div><div class="o"><q>Grüezi Herr Mitrovic, habe mich sehr gefreut, dass ich Ihnen schon zum 2. Mal ein Auto verkaufen durfte. Bestimmt wird der praktische i20 ein gutes und zuverlässiges Fahrzeug sein.</q></div></article>
+    </div>
+    <p class="src">Bewertungen und Antworten wörtlich von Google Maps, Stand 21.11.2026.</p>
+  </div>
+</section>
+
+<!-- ================= Fahrzeuge ================= -->
+<section class="mapsec" id="fahrzeuge">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Fahrzeuge</div>
+      <h2>Was gerade auf dem Platz steht.</h2>
+      <p class="lead">Der Bestand wechselt laufend. Welche Autos heute da sind, erfahren Sie am Telefon – inklusive Preis und Probefahrt.</p>
+    </div>
+    <div class="cars rv">
+      <article class="car-card"><figure><img src="img/g04.jpg" alt="Roter SUV auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure><div class="bd"><h3>SUV &amp; Crossover</h3><p>Kompakt bis gross, für Alltag und Ausfahrt.</p><div class="row"><span class="price">Preis auf Anfrage</span><a class="go" href="#probefahrt">Probefahrt <svg width="16" height="16"><use href="#i-r"/></svg></a></div></div></article>
+      <article class="car-card"><figure><img src="img/g24.jpg" alt="Silberner Kombi auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure><div class="bd"><h3>Kombi &amp; Familie</h3><p>Platz für Kinder, Gepäck und Ferien.</p><div class="row"><span class="price">Preis auf Anfrage</span><a class="go" href="#probefahrt">Probefahrt <svg width="16" height="16"><use href="#i-r"/></svg></a></div></div></article>
+      <article class="car-card"><figure><img src="img/g18.jpg" alt="Weisser Pick-up auf dem Platz der Garage Auto Nova" loading="lazy" width="1200" height="900"></figure><div class="bd"><h3>Nutzfahrzeuge</h3><p>Lieferwagen und Pick-ups für Handwerk und Firma.</p><div class="row"><span class="price">Preis auf Anfrage</span><a class="go" href="#probefahrt">Probefahrt <svg width="16" height="16"><use href="#i-r"/></svg></a></div></div></article>
+    </div>
+    <p class="note">Beispielfotos vom Platz. Aktuelle Fahrzeuge, Preise und Verfügbarkeit: 079 222 90 00.</p>
+  </div>
+</section>
+
+<!-- ================= Waschplatz ================= -->
+<section class="wash" id="waschplatz">
+  <div class="wrap wash-grid">
+    <figure class="rv"><img src="img/g14.jpg" alt="Waschplatz mit Tafel «Garage Auto Nova» an der Bischofszellerstrasse 108" loading="lazy" width="1200" height="900"></figure>
+    <div class="rv">
+      <div class="eyebrow">Bischofszellerstrasse 108</div>
+      <h2>Waschplatz gleich nebenan.</h2>
+      <div class="h24"><b>24 Std.</b><span>geöffnet – laut Tafel vor Ort</span></div>
+      <p class="lead">Auto kaufen, Auto waschen: am selben Ort in Gossau, direkt an der Bischofszellerstrasse.</p>
+      <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+        <a class="btn btn-dark" href="tel:+41713939000"><svg><use href="#i-tel"/></svg>071 393 90 00</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Bischofszellerstrasse+108,+9200+Gossau" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Route</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Probefahrt-Wunschtag ================= -->
+<section class="mapsec" id="probefahrt">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Probefahrt</div>
+      <h2>Wann möchten Sie fahren?</h2>
+      <p class="lead">Tag wählen, anrufen oder eine SMS schicken – die Zeit machen Sie direkt mit Martin Zeuch ab.</p>
+    </div>
+    <div class="days rv" id="days" role="group" aria-label="Wunschtag wählen"></div>
+    <div class="daycard rv" id="daycard">
+      <div>
+        <p class="t" id="dayT">–</p>
+        <ul>
+          <li><b>Probefahrt:</b> Zeit nach telefonischer Absprache</li>
+          <li><b>Waschplatz:</b> 24 Std. geöffnet (laut Tafel vor Ort)</li>
+        </ul>
+      </div>
+      <div class="acts">
+        <a class="btn btn-nova" href="tel:+41792229000"><svg><use href="#i-tel"/></svg>Anrufen</a>
+        <a class="btn btn-dark" id="smsBtn" href="sms:+41792229000"><svg><use href="#i-sms"/></svg>SMS mit Wunschtag</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Kontakt ================= -->
+<section class="kontakt on-dark" id="kontakt">
+  <div class="wrap k-grid">
+    <div class="rv">
+      <div class="eyebrow" style="color:var(--grau-hell)">Kontakt</div>
+      <h2>Garage Auto Nova AG</h2>
+      <div class="k-list">
+        <a class="k-item" href="tel:+41792229000"><svg><use href="#i-tel"/></svg><div><span>Verkauf · Martin Zeuch</span><b>079 222 90 00</b></div></a>
+        <a class="k-item" href="tel:+41713939000"><svg><use href="#i-tel"/></svg><div><span>Waschplatz</span><b>071 393 90 00</b></div></a>
+        <a class="k-item" href="https://www.google.com/maps/dir/?api=1&destination=Garage+Auto+Nova+AG,+Bischofszellerstrasse+108,+9200+Gossau" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><div><span>Platz &amp; Waschplatz</span><b>Bischofszellerstrasse 108, 9200 Gossau</b></div></a>
+      </div>
+      <a class="btn btn-nova" href="tel:+41792229000"><svg><use href="#i-tel"/></svg>Jetzt anrufen</a>
+    </div>
+    <div class="mapframe rv"><iframe title="Karte: Bischofszellerstrasse 108, Gossau" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=GARAGE%20AUTO%20NOVA%20AG%2C%20Bischofszellerstrasse%20108%2C%209200%20Gossau&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Garage Auto Nova AG</b> · Bischofszellerstrasse 108, 9200 Gossau SG · Sitz gemäss Handelsregister: Hochschorenstrasse 33, 9200 Gossau · UID CHE-110.644.145</div>
+    <div>Fotos: Garage Auto Nova AG (Google Maps) · Musterseite – Entwurf zur Ansicht</div>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-nova free" href="tel:+41792229000"><svg><use href="#i-tel"/></svg>Anrufen</a><a class="btn btn-dark free" href="https://www.google.com/maps/dir/?api=1&destination=Garage+Auto+Nova+AG,+Bischofszellerstrasse+108,+9200+Gossau" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Route</a></div>
+
+<script>
+(function(){
+  const N=77, pad=n=>String(n).padStart(2,'0'), src=n=>'img/g'+pad(n)+'.jpg', thumb=n=>'img/g'+pad(n)+'_s.jpg';
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hero=document.getElementById('hero'), A=document.getElementById('imgA'), B=document.getElementById('imgB');
+  const num=document.getElementById('num'), slider=document.getElementById('slider'), strip=document.getElementById('strip'), seasonEl=document.getElementById('season');
+  let cur=13, front=A, back=B, busy=false;
+
+  // filmstrip
+  const frag=document.createDocumentFragment();
+  for(let i=1;i<=N;i++){const b=document.createElement('button');b.setAttribute('role','listitem');b.setAttribute('aria-label','Foto '+i+' von 77');b.dataset.n=i;
+    const im=new Image();im.loading='lazy';im.decoding='async';im.src=thumb(i);im.alt='';im.width=104;im.height=78;b.appendChild(im);frag.appendChild(b);}
+  strip.appendChild(frag);
+
+  function setUI(n,noScroll){
+    num.textContent=n; slider.value=n; slider.style.setProperty('--p',((n-1)/(N-1)*100)+'%');
+    strip.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));
+    const t=strip.children[n-1]; if(t){t.classList.add('on'); if(!noScroll){ const sl=t.offsetLeft-strip.clientWidth/2+t.clientWidth/2; strip.scrollTo({left:sl,behavior:reduce?'auto':'smooth'});} }
+  }
+  function show(n,fade,noScroll){
+    n=((n-1+N)%N)+1; if(n===cur&&!fade) return; cur=n;
+    const url=src(n); const pre=new Image(); pre.src=url;
+    const swap=()=>{ back.src=url; back.alt='Foto '+n+' von 77: Auto auf dem Platz der Garage Auto Nova';
+      requestAnimationFrame(()=>{ back.style.opacity=1; front.style.opacity=0; const t=front; front=back; back=t; back.alt=''; }); };
+    const go=()=>{ swap(); setUI(n,noScroll); };
+    if(pre.complete) go(); else { pre.onload=go; pre.onerror=go; }
+  }
+  A.style.opacity=1; B.style.opacity=0;
+
+  // one-time timelapse: winter -> summer, then stop
+  const seq=[[13,'Winter'],[15,'Winter'],[58,'Winter'],[65,'Frühling'],[11,'Frühling'],[33,'Sommer'],[47,'Sommer'],[22,'Sommer'],[63,'Herbst'],[4,'Herbst'],[76,'']];
+  function finish(){ seasonEl.textContent=''; hero.classList.remove('playing'); hero.classList.add('ready'); }
+  function play(){
+    if(reduce){ show(76,true); finish(); return; }
+    hero.classList.add('playing');
+    const imgs=seq.map(s=>{const i=new Image(); i.src=src(s[0]); return i;});
+    const go=()=>{ let k=0; const step=()=>{ const [n,s]=seq[k]; if(s) seasonEl.textContent=s; show(n,true); k++; if(k<seq.length) setTimeout(step,330); else setTimeout(finish,400); }; step(); };
+    let done=false; const start=()=>{ if(!done){done=true; go();} };
+    Promise.all(imgs.map(i=>i.decode?i.decode().catch(()=>{}):Promise.resolve())).then(()=>setTimeout(start,250));
+    setTimeout(start,3500);
+  }
+  if(document.readyState==='complete') play(); else addEventListener('load',play);
+
+  const live=()=>hero.classList.contains('ready');
+  slider.addEventListener('input',()=>{ if(live()) show(+slider.value); });
+  document.getElementById('prev').addEventListener('click',()=>live()&&show(cur-1));
+  document.getElementById('next').addEventListener('click',()=>live()&&show(cur+1));
+  strip.addEventListener('click',e=>{const b=e.target.closest('button'); if(b&&live()) show(+b.dataset.n);});
+  if(matchMedia('(hover:hover)').matches){ let ht; strip.addEventListener('mouseover',e=>{const b=e.target.closest('button'); if(!b||!live())return; clearTimeout(ht); ht=setTimeout(()=>show(+b.dataset.n,false,true),90);}); }
+  // swipe on stage
+  const st=document.getElementById('stage'); let x0=null,y0=null;
+  st.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
+  st.addEventListener('touchend',e=>{ if(x0===null||!live())return; const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)) show(cur+(dx<0?1:-1)); x0=null; });
+  st.addEventListener('keydown',e=>{});
+  document.addEventListener('keydown',e=>{ if(!live()) return; const r=st.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return; if(e.target.matches('input,textarea')) return; if(e.key==='ArrowRight'){show(cur+1);} if(e.key==='ArrowLeft'){show(cur-1);} });
+
+  // call bar: only when hero buttons are out of view
+  const cb=document.querySelector('.callbar'), heroCta=document.querySelector('.hero .cta');
+  new IntersectionObserver(es=>{ cb.classList.toggle('show',!es[0].isIntersecting && es[0].boundingClientRect.top<0); }).observe(heroCta);
+
+  // reveal once (fast scroll safe)
+  const rvs=[...document.querySelectorAll('.rv')];
+  const io=new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} }),{rootMargin:'0px 0px -8% 0px',threshold:0});
+  rvs.forEach(el=>io.observe(el));
+  addEventListener('scroll',()=>{ rvs.forEach(el=>{ if(!el.classList.contains('in') && el.getBoundingClientRect().top<innerHeight*0.98){ el.classList.add('in'); } }); },{passive:true});
+
+  // ---------- Map ----------
+  const G=[726.5,135];
+  const R=[
+    {k:'Wallis',b:0.12,x:317.4,y:514.5,car:'VW T-Roc',q:'Vom Wallis in die Ostschweiz! Danke Dario, dass Du bei mir den T-Roc gekauft hast.',w:'Antwort an Dario Hischier',lx:0,ly:44,a:'middle'},
+    {k:'Basel',b:0.22,x:367.4,y:92.1,car:'VW T6 Multivan',q:'Mit dem VW T6 Multivan habt Ihr ein perfektes Familienauto ausgesucht, mit dem Ihr bestimmt viele spannende Abenteuer erleben dürft. Liebe Grüsse nach Basel.',w:'Antwort an Janos Marti',lx:0,ly:-24,a:'middle'},
+    {k:'Bernbiet',b:0.04,x:337,y:285.8,car:'Seat Leon',q:'Super, dass es für Sie ein angenehmer Kauf war und dass der Seat Leon so gut passt. Danke für die gute Beurteilung und Grüsse ins "Bernbiet"',w:'Antwort an Janis',lx:-20,ly:8,a:'end'},
+    {k:'Innerschweiz',b:0.1,x:523.9,y:254.1,car:'Audi A5 Cabriolet',q:'Mit diesem feinen Cabriolet werden Sie sicher viele schöne Ausfahrten erleben. Viele Grüsse in die Innerschweiz.',w:'Antwort an Stephan Huber',lx:0,ly:40,a:'middle'},
+    {k:'Thurgau',x:691.3,y:85.7,car:'Hyundai Kona EV',q:'Und mit dem Kona EV fahren Sie ab jetzt ein modernes, komfortables und praktisches Auto, welches auch die Umwelt freut. Liebe Grüsse ins Thurgau und danke für die Komplimente.',w:'Antwort an K Johnson',lx:-20,ly:-14,a:'end'},
+    {k:'Bodensee',x:767.4,y:95.3,car:'Mercedes GLA 250 AMG',q:'Für Eure Fahrten mit dem Mercedes GLA 250AMG alles Gute und liebe Grüsse an den Bodensee',w:'Antwort an Boguslawa Lukowska',lx:18,ly:-12,a:'start'},
+    {k:'Rheintal',x:795.7,y:149.3,car:'VW Tiguan',q:'Der Dank geht zurück ins Rheintal, ich wünsche viel Freude mit den neuen Tiguan.',w:'Antwort an christoph',lx:20,ly:8,a:'start'},
+    {k:'Appenzellerland',x:763,y:165.1,car:'Mercedes CLA 45 AMG',q:'Selten habe ich ein Auto so spontan verkaufen und im gleichen Moment abliefern dürfen. Danke für die schnelle Entscheidung und für den sehr netten Kontakt. Liebe Grüsse ins Appenzellerland.',w:'Antwort an Andre',lx:4,ly:44,a:'middle'}
+  ];
+  const ns='http://www.w3.org/2000/svg', routes=document.getElementById('routes'), pins=document.getElementById('pins'), card=document.getElementById('mapcard'), list=document.getElementById('reglist'), map=document.getElementById('map'), side=document.getElementById('mapside');
+  R.forEach((r,i)=>{
+    const mx=(G[0]+r.x)/2, my=(G[1]+r.y)/2, dx=r.x-G[0], dy=r.y-G[1], d=Math.hypot(dx,dy), bend=Math.min(110,d*(r.b??.28));
+    const cx=mx+(-dy/d)*bend*-1, cy=my+(dx/d)*bend*-1;
+    const p=document.createElementNS(ns,'path'); p.setAttribute('d',`M${G[0]},${G[1]} Q${cx},${cy} ${r.x},${r.y}`); p.setAttribute('class','route'); p.style.setProperty('--i',i); routes.appendChild(p);
+    const len=Math.ceil(p.getTotalLength()); p.style.setProperty('--len',len);
+    const g=document.createElementNS(ns,'g'); g.setAttribute('class','pin'); g.setAttribute('tabindex','0'); g.setAttribute('role','button'); g.setAttribute('aria-label',r.k+': '+r.car); g.style.setProperty('--i',i);
+    g.innerHTML=`<circle class="halo" cx="${r.x}" cy="${r.y}" r="22"/><circle class="dot" cx="${r.x}" cy="${r.y}" r="9"/><text x="${r.x+r.lx}" y="${r.y+r.ly}" text-anchor="${r.a}">${r.k}</text>`;
+    pins.appendChild(g); r.g=g; r.p=p;
+    const c=document.createElement('div'); c.innerHTML=`<div class="eyebrow"><b>Gossau → ${r.k}</b></div><div class="reg">${r.k}</div><span class="car">${r.car}</span><q>${r.q}</q><div class="who">Martin Zeuch · ${r.w} auf Google</div>`; card.appendChild(c); r.c=c;
+    const b=document.createElement('button'); b.textContent=r.k; b.type='button'; list.appendChild(b); r.b=b;
+  });
+  let sel=0;
+  function pick(i){ sel=i; R.forEach((r,j)=>{ const on=j===i; r.g.classList.toggle('on',on); r.p.classList.toggle('on',on); r.c.classList.toggle('on',on); r.b.classList.toggle('on',on); r.b.setAttribute('aria-pressed',on); }); }
+  pick(0);
+  const mapLive=()=>map.classList.contains('live');
+  R.forEach((r,i)=>{
+    r.g.addEventListener('click',()=>mapLive()&&pick(i));
+    r.g.addEventListener('keydown',e=>{ if((e.key==='Enter'||e.key===' ')&&mapLive()){e.preventDefault();pick(i);} });
+    if(matchMedia('(hover:hover)').matches) r.g.addEventListener('mouseenter',()=>mapLive()&&pick(i));
+    r.b.addEventListener('click',()=>mapLive()&&pick(i));
+  });
+  const mio=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ mio.disconnect(); map.classList.add('drawn'); const t=reduce?0:(R.length*120+1300); setTimeout(()=>{ map.classList.add('live'); side.classList.add('live-list'); },t); } },{threshold:.25});
+  side.classList.remove('live-list');
+  mio.observe(map);
+
+  // ---------- Privat | Firma ----------
+  const sw=document.getElementById('switch');
+  sw.addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; const k=b.dataset.k;
+    sw.classList.toggle('firma',k==='firma');
+    sw.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    document.querySelectorAll('.pf .pane').forEach(p=>{ const on=p.dataset.k===k; p.classList.toggle('on',on); p.setAttribute('aria-hidden',!on); });
+  });
+
+  // ---------- Wunschtag ----------
+  const days=document.getElementById('days'), dayT=document.getElementById('dayT'), sms=document.getElementById('smsBtn');
+  const WD=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'], WS=['So','Mo','Di','Mi','Do','Fr','Sa'];
+  const MO=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  const zh=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Zurich'}));
+  const list7=[]; for(let i=0;i<7;i++){ const d=new Date(zh); d.setDate(zh.getDate()+i); list7.push(d); }
+  function pickDay(i){ const d=list7[i];
+    [...days.children].forEach((b,j)=>b.setAttribute('aria-pressed',j===i));
+    const label=WD[d.getDay()]+', '+d.getDate()+'. '+MO[d.getMonth()];
+    dayT.textContent='Probefahrt am '+label+(i===0?' (heute)':'');
+    const body='Grüezi Herr Zeuch, ich möchte am '+label+' eine Probefahrt vereinbaren. Welche Zeit passt Ihnen?';
+    sms.href='sms:+41792229000?&body='+encodeURIComponent(body);
+  }
+  list7.forEach((d,i)=>{ const b=document.createElement('button'); b.type='button'; b.className='day'+(i===0?' today':''); b.innerHTML=`<span class="wd">${WS[d.getDay()]}</span><span class="dn">${d.getDate()}</span><span class="mo">${MO[d.getMonth()].slice(0,3)}.</span>`; b.addEventListener('click',()=>pickDay(i)); days.appendChild(b); });
+  pickDay(0);
+})();
+</script>
+</body>
+</html>
