@@ -68,16 +68,16 @@ section{padding:clamp(64px,8vw,112px) 0}
 /* Hero: Foto oben, gelbes Vordach mit Titel unten */
 .hero{position:relative;display:flex;flex-direction:column;height:calc(100svh - 68px);min-height:560px;max-height:1050px;background:var(--graphit);color:#fff;overflow:hidden;padding:0}
 .hero .bild{position:relative;flex:1;min-height:0;overflow:hidden}
-.hero .bild img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;opacity:0;transform:scale(1.03);transition:opacity 1s ease, transform 1.6s ease}
+.hero .bild img{width:100%;height:100%;object-fit:cover;object-position:50% 74%;opacity:0;transform:scale(1.03);transition:opacity 1s ease, transform 1.6s ease}
 .hero.da .bild img{opacity:1;transform:none}
 .no-js .hero .bild img{opacity:1;transform:none}
 .dach{position:relative;z-index:4;background:var(--gelb);color:var(--graphit);box-shadow:0 -10px 30px rgba(0,0,0,.25)}
 .dach::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px;background:linear-gradient(var(--gelb-hell),var(--gelb));border-radius:10px 10px 0 0}
 .dach-oben{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:16px 0 6px}
-.dach h1{font-size:clamp(54px,min(6.6vw,10vh),112px);line-height:.9}
+.dach h1{font-size:clamp(40px,min(5.4vw,8vh),92px);line-height:.9}
 .dach .knoepfe{display:flex;gap:10px;flex-wrap:wrap}
 .btn-l{border:2px solid var(--graphit);color:var(--graphit)}
-@media (hover:hover){.ready .btn-l:hover{box-shadow:0 0 0 4px rgba(30,33,36,.18)}}
+@media (hover:hover){.ready .btn-l:hover{background:rgba(30,33,36,.1);box-shadow:0 0 0 4px rgba(30,33,36,.2)}}
 .dach-unten{display:flex;flex-wrap:wrap;align-items:center;gap:4px 26px;padding:8px 0 14px;border-top:2px solid rgba(30,33,36,.18)}
 .dach .ort{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
 .dach a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:16px;padding:6px 10px;margin-left:-10px;border-radius:8px;transition:background-color .2s, box-shadow .2s}
@@ -96,6 +96,8 @@ section{padding:clamp(64px,8vw,112px) 0}
 }
 @media (max-width:420px){.dach .btn{font-size:21px;padding:0 14px;min-height:48px}}
 @media (orientation:landscape) and (max-height:560px){.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:auto;min-height:0}.hero .bild{aspect-ratio:4/3;flex:none}.dach::before{display:none}.dach-oben{padding-top:12px}.dach h1{font-size:40px}.dach-unten{flex-direction:column;align-items:flex-start;gap:0}.dach .ort{display:none}}
+@media (min-width:861px){.dach-oben{flex-wrap:nowrap}}
+@media (min-width:861px) and (max-height:760px){.dach-oben{padding:6px 0 2px}.dach h1{font-size:40px}.dach-unten{padding:2px 0 6px}.dach .btn{min-height:40px;font-size:19px}.dach a{padding:3px 10px}.hero .bild img{object-position:50% 80%}}
 @media (min-width:861px) and (min-height:561px) and (max-height:860px){.dach h1{font-size:min(58px,7.4vh)}.dach-oben{padding:10px 0 4px}.dach-unten{padding:4px 0 8px}.dach .btn{min-height:44px;font-size:20px}.dach .ort{display:none}}
 
 /* Fakten */
@@ -122,18 +124,18 @@ section{padding:clamp(64px,8vw,112px) 0}
 .typ span{display:block;padding:10px 12px 12px;font-family:var(--kopf);font-size:23px;letter-spacing:.03em;line-height:1}
 .typ small{display:block;padding:0 12px 12px;margin-top:-6px;font-size:13px;color:#5a6066}
 .typ[aria-pressed="true"]{border-color:var(--graphit);box-shadow:0 0 0 4px var(--gelb)}
-@media (hover:hover){.ready .typ:hover{box-shadow:0 0 0 4px rgba(255,196,0,.55),0 12px 26px rgba(0,0,0,.12);transform:translateY(-2px)}}
+@media (hover:hover){.ready .live .typ:hover{box-shadow:0 0 0 4px rgba(255,196,0,.55),0 12px 26px rgba(0,0,0,.12);transform:translateY(-2px)}}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{min-height:48px;padding:0 18px;border-radius:999px;background:#fff;border:2px solid var(--beton2);font-weight:600;font-size:16px;transition:border-color .2s, box-shadow .2s, background-color .2s}
 .chip[aria-pressed="true"]{background:var(--graphit);color:#fff;border-color:var(--graphit);box-shadow:0 0 0 3px var(--gelb)}
-@media (hover:hover){.ready .chip:hover{border-color:var(--gelb-tief);box-shadow:0 0 0 3px rgba(255,196,0,.35)}}
+@media (hover:hover){.ready .live .chip:hover{border-color:var(--gelb-tief);box-shadow:0 0 0 3px rgba(255,196,0,.35)}}
 .tage{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
 .tag{min-height:70px;border-radius:10px;background:#fff;border:2px solid var(--beton2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:border-color .2s, box-shadow .2s, background-color .2s}
 .tag b{font-family:var(--kopf);font-weight:400;font-size:26px;line-height:1}
 .tag small{font-size:12px;color:#5a6066}
 .tag[aria-pressed="true"]{background:var(--graphit);color:#fff;border-color:var(--graphit);box-shadow:0 0 0 3px var(--gelb)}
 .tag[aria-pressed="true"] small{color:var(--gelb)}
-@media (hover:hover){.ready .tag:hover{border-color:var(--gelb-tief);box-shadow:0 0 0 3px rgba(255,196,0,.35)}}
+@media (hover:hover){.ready .live .tag:hover{border-color:var(--gelb-tief);box-shadow:0 0 0 3px rgba(255,196,0,.35)}}
 .hinweis{font-size:14px;color:#5a6066;margin-top:10px}
 
 /* der gelbe Auftrag */
@@ -157,7 +159,9 @@ section{padding:clamp(64px,8vw,112px) 0}
 .foto-k{border-radius:10px;overflow:hidden;background:#cfd2d5;transition:box-shadow .2s, transform .2s, opacity .4s}
 .foto-k img{width:100%;aspect-ratio:4/3;object-fit:cover}
 @media (hover:hover){.ready .foto-k:hover{box-shadow:0 0 0 4px rgba(255,196,0,.6);transform:translateY(-2px)}}
-.fotos.wechsel .foto-k{opacity:.15}
+.fotos{transition:opacity .25s ease}
+.fotos.wechsel{opacity:0}
+.alle{margin-top:16px}
 @media (max-width:1020px){.such-grid{grid-template-columns:minmax(0,1fr)}.auftrag{position:relative;top:0}.typen{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:520px){.typen{grid-template-columns:1fr 1fr}.tage{gap:5px}.tag{min-height:60px}.tag b{font-size:22px}}
 
@@ -166,7 +170,7 @@ section{padding:clamp(64px,8vw,112px) 0}
 .google{display:inline-flex;align-items:center;gap:14px;padding:12px 20px;border-radius:12px;background:var(--gelb);color:var(--graphit);text-decoration:none;transition:box-shadow .2s, background-color .2s}
 .google b{font-family:var(--kopf);font-weight:400;font-size:52px;line-height:.9}
 .google small{display:block;font-size:13px;font-weight:600}
-@media (hover:hover){.ready .google:hover{background:var(--gelb-hell);box-shadow:0 0 0 5px rgba(255,196,0,.25)}}
+@media (hover:hover){.ready .live .google:hover{background:var(--gelb-hell);box-shadow:0 0 0 5px rgba(255,196,0,.25)}}
 .paare{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .paar{display:flex;flex-direction:column;gap:10px;transition:transform .2s}
 .blase{border-radius:16px;padding:16px 18px;font-size:16px;line-height:1.5}
@@ -270,7 +274,7 @@ section{padding:clamp(64px,8vw,112px) 0}
 <section class="fakten" aria-label="Auf einen Blick">
   <div class="wrap reihe">
     <div class="fakt rise"><b>42/42</b><span>Bewertungen persönlich beantwortet</span><small>von Martin Zeuch, auf Google</small></div>
-    <div class="fakt rise"><b>0</b><span>Ablieferungspauschale</span><small>«Das gehört zu einer richtigen Ablieferung dazu.»</small></div>
+    <div class="fakt rise"><b>Keine</b><span>Ablieferungspauschale</span><small>«Das gehört zu einer richtigen Ablieferung dazu.»</small></div>
     <div class="fakt rise"><b>CH</b><span>Kunden aus der ganzen Schweiz</span><small>Wallis, Basel, Thurgau, Bodensee …</small></div>
     <div class="fakt rise"><b>24h</b><span>Waschplatz</span><small>auf dem gleichen Gelände</small></div>
   </div>
@@ -333,7 +337,7 @@ section{padding:clamp(64px,8vw,112px) 0}
         </dl>
         <p class="an">So erreichen Sie ihn direkt<b>079 222 90 00</b></p>
         <a class="btn btn-d" id="sms" href="sms:+41792229000">Per SMS senden</a>
-        <a class="btn btn-r" style="color:var(--graphit);border-color:rgba(30,33,36,.4)" href="tel:+41792229000">Lieber anrufen</a>
+        <a class="btn btn-l" href="tel:+41792229000">Lieber anrufen</a>
         <p class="fein">Das SMS ist vorbereitet – Sie sehen es vor dem Senden und können es ergänzen.</p>
       </aside>
     </div>
@@ -342,6 +346,7 @@ section{padding:clamp(64px,8vw,112px) 0}
       <h3 class="rise" id="bei-uns-t">So etwas stand schon bei uns: SUV</h3>
       <p class="rise">Fotos von Martin Zeuch, alle auf dem Platz an der Bischofszellerstrasse – nicht der aktuelle Bestand.</p>
       <div class="fotos" id="fotos"></div>
+      <button type="button" class="btn btn-d alle" id="alle">Alle zeigen</button>
     </div>
   </div>
 </section>
@@ -456,17 +461,23 @@ var TYP={suv:{n:'SUV',f:[1,2,3,4,5,12,17,20,21,22,23,26,32,33,36,39,41,42,43,53,
 var wahl={typ:'suv',budget:'CHF 15’000–25’000',fuer:'Privat',tag:''};
 var fotos=D.getElementById('fotos'), titel=D.getElementById('bei-uns-t');
 function pad(n){return n<10?'0'+n:''+n}
+var alleOffen=false;
 function zeigeFotos(t,sofort){
-  function setzen(){ fotos.innerHTML=TYP[t].f.map(function(n){return '<div class="foto-k"><img src="img4/g'+pad(n)+'.jpg" alt="'+TYP[t].n+' auf dem Platz der Garage Auto Nova" loading="lazy" width="900" height="675"></div>'}).join(''); titel.textContent='So etwas stand schon bei uns: '+TYP[t].n; fotos.classList.remove('wechsel'); }
+  function setzen(){ var liste=alleOffen?TYP[t].f:TYP[t].f.slice(0,8);
+    fotos.innerHTML=liste.map(function(n){return '<div class="foto-k"><img src="img4/g'+pad(n)+'.jpg" alt="'+TYP[t].n+' auf dem Platz der Garage Auto Nova" loading="lazy" width="900" height="675"></div>'}).join('');
+    titel.textContent='So etwas stand schon bei uns: '+TYP[t].n;
+    var b=D.getElementById('alle'); b.hidden=TYP[t].f.length<=8; b.textContent=alleOffen?'Weniger zeigen':'Alle '+TYP[t].f.length+' Fotos zeigen';
+    requestAnimationFrame(function(){ fotos.classList.remove('wechsel'); }); }
   if(sofort||reduce){ setzen(); return; }
-  fotos.classList.add('wechsel'); setTimeout(setzen,280);
+  fotos.classList.add('wechsel'); setTimeout(setzen,260);
 }
 function markiere(id){ var el=D.getElementById(id); el.classList.remove('neu'); void el.offsetWidth; el.classList.add('neu'); setTimeout(function(){el.classList.remove('neu')},700); }
 function smsText(){
   var t='Grüezi Herr Zeuch, ich suche ein Auto: '+TYP[wahl.typ].n+', Budget '+wahl.budget+', '+wahl.fuer+'.'+(wahl.tag?' Wunschtag für Besichtigung: '+wahl.tag:'')+' Bitte melden Sie sich mit passenden Autos. Danke!';
   D.getElementById('sms').href='sms:+41792229000?&body='+encodeURIComponent(t);
 }
-D.getElementById('typen').addEventListener('click',function(e){ var b=e.target.closest('.typ'); if(!b) return;
+D.getElementById('alle').addEventListener('click',function(){ alleOffen=!alleOffen; zeigeFotos(wahl.typ,true); });
+D.getElementById('typen').addEventListener('click',function(e){ var b=e.target.closest('.typ'); if(!b) return; alleOffen=false;
   wahl.typ=b.dataset.typ; D.querySelectorAll('.typ').forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false')});
   D.getElementById('a-typ').textContent=TYP[wahl.typ].n; markiere('a-typ'); zeigeFotos(wahl.typ); smsText(); });
 D.querySelectorAll('.chips').forEach(function(g){ g.addEventListener('click',function(e){ var b=e.target.closest('.chip'); if(!b) return;
