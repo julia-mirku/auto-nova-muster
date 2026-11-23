@@ -12,7 +12,7 @@
 <link rel="preload" as="image" href="img6/e_kino_16x9.jpg" media="(min-width: 861px)" fetchpriority="high">
 <link rel="preload" as="image" href="img6/e_kino_9x16.jpg" media="(max-width: 860px)" fetchpriority="high">
 <style>
-/* Entwurf v6 · Variante E · Palette «Abendlicht (Tannennacht & Laternen-Amber)» */
+/* Entwurf v6 · Variante E · Palette «Abendlicht (Tannennacht & Eisblau)» */
 :root{
   --bg:#EFEEE8;
   --bg2:#D9D7CD;
@@ -25,27 +25,27 @@
   --on-dark:#F3EEE4;
   --on-dark2:#CFC8BA;
   --grau:#A19A8C;
-  --akz:#8A5212;
-  --akz-dunkel:#6E400C;
+  --akz:#2C5A73;
+  --akz-dunkel:#1F4558;
   --on-akz:#FFFFFF;
-  --akz-hell:#F0B357;
-  --ring:#D49A45;
-  --schluss-bg:#F0B357;
+  --akz-hell:#A9D1E6;
+  --ring:#6FA3BF;
+  --schluss-bg:#A9D1E6;
   --on-schluss:#121A17;
   --kopf-bg:#0B1210;
   --kopf-line:#1F2A26;
   --kopf-ink:#F3EEE4;
   --kopf-ink2:#A19A8C;
-  --kopf-akz:#F0B357;
-  --kopf-btn-bg:#F0B357;
+  --kopf-akz:#A9D1E6;
+  --kopf-btn-bg:#A9D1E6;
   --kopf-btn-ink:#121A17;
-  --fokus-dunkel:#F0B357;
+  --fokus-dunkel:#A9D1E6;
   --fuss-bg:#070C0B;
   --fuss-ink:#A19A8C;
-  --akz-rgb:138,82,18;
-  --akz-hell-rgb:240,179,87;
+  --akz-rgb:44,90,115;
+  --akz-hell-rgb:169,209,230;
   --ink-rgb:18,26,23;
-  --kopf-akz-rgb:240,179,87;
+  --kopf-akz-rgb:169,209,230;
   --kopf:'Bebas Neue', Impact, 'Arial Narrow', sans-serif; --body:'Work Sans', system-ui, sans-serif; --r:12px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -123,23 +123,23 @@ section{padding:clamp(52px,7vw,100px) 0}
 .e-in{position:relative;width:min(1344px,100% - 96px);margin-inline:auto;display:flex;flex-direction:column;justify-content:center;
   padding:clamp(18px,3svh,40px) 0 clamp(14px,2.4svh,28px)}
 .e-text{max-width:min(560px,44vw);margin-top:auto}
-.hE .h-ort{color:#F0B357;display:flex;align-items:center;gap:12px}
-.hE .h-ort::before{content:"";width:28px;height:2px;background:#F0B357;border-radius:2px}
+.hE .h-ort{color:#A9D1E6;display:flex;align-items:center;gap:12px}
+.hE .h-ort::before{content:"";width:28px;height:2px;background:#A9D1E6;border-radius:2px}
 .hE h1{font-size:min(8.2vw,13.6svh);line-height:.88;margin-top:clamp(10px,1.8svh,18px);color:#F6F1E7;text-shadow:0 2px 30px rgba(0,0,0,.45)}
 .hE h1 span{display:block}
-.hE h1 em{font-style:normal;color:#F0B357}
+.hE h1 em{font-style:normal;color:#A9D1E6}
 .e-lead{margin-top:clamp(12px,2svh,20px);font-size:clamp(16px,2.1svh,19px);line-height:1.5;color:#DCD6CA;max-width:38ch}
 .e-lead b{color:#F6F1E7;font-weight:600}
 .hE .knoepfe{display:flex;gap:10px;flex-wrap:wrap;margin-top:clamp(16px,3svh,30px)}
-.hE .btn-1{background:#F0B357;color:#10150F}
+.hE .btn-1{background:#A9D1E6;color:#10150F}
 .hE .btn-2{border:2px solid rgba(246,241,231,.6);color:#F6F1E7;background:rgba(9,15,13,.35)}
 @media (hover:hover){
-  .ready .hE .btn-1:hover{background:#F6C677;box-shadow:0 0 0 5px rgba(240,179,87,.22),0 10px 34px rgba(240,179,87,.3)}
+  .ready .hE .btn-1:hover{background:#F6C677;box-shadow:0 0 0 5px rgba(169,209,230,.22),0 10px 34px rgba(169,209,230,.3)}
   .ready .hE .btn-2:hover{border-color:#F6F1E7;background:rgba(246,241,231,.1);box-shadow:0 0 0 4px rgba(246,241,231,.14)}
 }
 .e-unten{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:auto;padding-top:clamp(14px,2.4svh,26px)}
 .hE .h-fakten{flex-direction:row;flex-wrap:wrap;gap:2px 26px;color:#F6F1E7}
-.hE .h-fakten svg{color:#F0B357}
+.hE .h-fakten svg{color:#A9D1E6}
 .e-hinweis{font-size:12px;color:#B9B2A4;text-align:right;max-width:30ch;text-shadow:0 1px 8px rgba(0,0,0,.8)}
 
 /* Bewegung: einmal, ruhig. Der Abend «geht an»: Bild blendet aus dem Dunkel auf und rückt 4 % näher (8 s); Text erscheint danach.
